@@ -1,37 +1,63 @@
 extends KinematicBody
 
-# How fast the player moves in meters per second.
-export var speed = 14
-# The downward acceleration when in the air, in meters per second squared.
-export var fall_acceleration = 75
+var gravity = -9.8
+var velocity = Vector3()
+var camera
+var character
 
-var velocity = Vector3.ZERO
+const SPEED = 6
+const ACCELERATION = 3
+const DE_ACCELERATION = 5
 
-func _physics_process(delta):
-	# We create a local variable to store the input direction.
-	var direction = Vector3.ZERO
-
-	# We check for each move input and update the direction accordingly.
-	if Input.is_action_pressed("move_right"):
-		direction.x += 1
-	if Input.is_action_pressed("move_left"):
-		direction.x -= 1
-	if Input.is_action_pressed("move_back"):
-		# Notice how we are working with the vector's x and z axes.
-		# In 3D, the XZ plane is the ground plane.
-		direction.z += 1
-	if Input.is_action_pressed("move_forward"):
-		direction.z -= 1
-
-	# prevent to add up vectors lengths if two direction keys are pressed at once
-	if direction != Vector3.ZERO:
-		direction = direction.normalized()
-		$Pivot.look_at(translation + direction, Vector3.UP)
+func _ready(): 
+	character = get_node(".")
+	# Set an initial rotation for the character
+	character.rotation_degrees.y = 180  # TODO fix wrong direction 
 	
-	# Ground velocity
-	velocity.x = direction.x * speed
-	velocity.z = direction.z * speed
-	# Vertical velocity
-	velocity.y -= fall_acceleration * delta
-	# Moving the character
-	velocity = move_and_slide(velocity, Vector3.UP)
+func _physics_process(delta):
+	camera = get_node("target/Camera").get_global_transform()
+	var dir = Vector3()
+	
+	var is_moving = false
+	
+	if Input.is_action_pressed("move_forward"):
+		dir += -camera.basis.z
+		is_moving = true
+	if Input.is_action_pressed("move_back"):
+		dir += camera.basis.z
+		is_moving = true
+	if Input.is_action_pressed("move_left"):
+		dir += -camera.basis.x
+		is_moving = true
+	if Input.is_action_pressed("move_right"):
+		dir += camera.basis.x
+		is_moving = true
+		
+	dir.y = 0
+	dir = dir.normalized()
+	
+	velocity.y += delta * gravity
+	
+	var hv = velocity
+	hv.y = 0
+	
+	var new_pos = dir * SPEED
+	var accel = DE_ACCELERATION
+	
+	if (dir.dot(hv) > 0): 
+		accel = ACCELERATION
+		
+	hv = hv.linear_interpolate(new_pos, accel * delta)
+	
+	velocity.x = hv.x
+	velocity.z = hv.z
+	
+	velocity = move_and_slide(velocity, Vector3(0,1,0))
+	
+	if is_moving: 
+		# Rotate player to direction
+		var angle = atan2(dir.x, dir.z)
+		var char_rot = character.get_rotation()
+		
+		char_rot.y = angle
+		character.rotation_degrees.y = angle * 180 / PI  # Update the character's rotation
