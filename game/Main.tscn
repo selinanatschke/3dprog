@@ -1,9 +1,15 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=24 format=2]
 
 [ext_resource path="res://Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://blender/basicWall.tscn" type="PackedScene" id=2]
 [ext_resource path="res://blender/bookshelf.tscn" type="PackedScene" id=3]
 [ext_resource path="res://blender/bookshelf_full.glb" type="PackedScene" id=4]
+[ext_resource path="res://blender/bookshelf_rest.tscn" type="PackedScene" id=5]
+[ext_resource path="res://blender/bookshelf_halffull.tscn" type="PackedScene" id=6]
+[ext_resource path="res://blender/bookshelf_full.tscn" type="PackedScene" id=7]
+[ext_resource path="res://blender/table.tscn" type="PackedScene" id=8]
+[ext_resource path="res://blender/stool.tscn" type="PackedScene" id=9]
+[ext_resource path="res://blender/chair.tscn" type="PackedScene" id=10]
 
 [sub_resource type="BoxShape" id=1]
 extents = Vector3( 15, 1, 30 )
@@ -107,41 +113,73 @@ transform = Transform( 7.54979e-08, 0, 2, 0, 1, 0, -1, 0, 1.50996e-07, -10, 0, 3
 [node name="Bookshelf" type="Spatial" parent="MainRoom"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 0, 0 )
 
-[node name="bookshelf" parent="MainRoom/Bookshelf" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -29, 0, -26 )
+[node name="bookshelf_full" parent="MainRoom/Bookshelf" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -29, 5, -26 )
 
-[node name="bookshelf2" parent="MainRoom/Bookshelf" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -29, 0, -20 )
+[node name="bookshelf_rest" parent="MainRoom/Bookshelf" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -29, 5, -20 )
 
-[node name="bookshelf3" parent="MainRoom/Bookshelf" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -29, 0, -6 )
+[node name="bookshelf_halffull" parent="MainRoom/Bookshelf" instance=ExtResource( 6 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -28.7311, 5, -6.38707 )
 
-[node name="bookshelf4" parent="MainRoom/Bookshelf" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -29, 0, 0 )
+[node name="bookshelf_full2" parent="MainRoom/Bookshelf" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -29, 5, -1 )
 
-[node name="bookshelf5" parent="MainRoom/Bookshelf" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -29, 0, 14 )
+[node name="bookshelf_rest2" parent="MainRoom/Bookshelf" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -29, 5, 20 )
 
-[node name="bookshelf6" parent="MainRoom/Bookshelf" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -29, 0, 20 )
+[node name="bookshelf_halffull2" parent="MainRoom/Bookshelf" instance=ExtResource( 6 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -28.7311, 5, 13.6129 )
 
-[node name="bookshelf7" parent="MainRoom/Bookshelf" instance=ExtResource( 3 )]
-transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -25, 0, -29 )
+[node name="bookshelf_full3" parent="MainRoom/Bookshelf" instance=ExtResource( 7 )]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -25, 5, -29 )
 
-[node name="bookshelf8" parent="MainRoom/Bookshelf" instance=ExtResource( 3 )]
-transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -19, 0, -29 )
+[node name="bookshelf_rest3" parent="MainRoom/Bookshelf" instance=ExtResource( 5 )]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -19, 5, -29 )
 
-[node name="bookshelf9" parent="MainRoom/Bookshelf" instance=ExtResource( 3 )]
-transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -9, 0, -29 )
+[node name="bookshelf_halffull3" parent="MainRoom/Bookshelf" instance=ExtResource( 6 )]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -8.73115, 5, -29.0298 )
 
-[node name="bookshelf10" parent="MainRoom/Bookshelf" instance=ExtResource( 3 )]
-transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -3, 0, -29 )
+[node name="bookshelf_full4" parent="MainRoom/Bookshelf" instance=ExtResource( 7 )]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -3, 5, -29 )
 
-[node name="bookshelf11" parent="MainRoom/Bookshelf" instance=ExtResource( 3 )]
-transform = Transform( -1, 0, -8.9407e-08, 0, 1, 0, 8.9407e-08, 0, -1, -1, 0, 8 )
+[node name="bookshelf_rest4" parent="MainRoom/Bookshelf" instance=ExtResource( 5 )]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -1, 5, 14 )
 
-[node name="bookshelf12" parent="MainRoom/Bookshelf" instance=ExtResource( 3 )]
-transform = Transform( -1, 0, -8.9407e-08, 0, 1, 0, 8.9407e-08, 0, -1, -1, 0, 14 )
+[node name="bookshelf_halffull4" parent="MainRoom/Bookshelf" instance=ExtResource( 6 )]
+transform = Transform( -1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -0.731148, 5, 8.97021 )
+
+[node name="furniture" type="Spatial" parent="MainRoom"]
+
+[node name="table" parent="MainRoom/furniture" instance=ExtResource( 8 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -6.54726 )
+
+[node name="table2" parent="MainRoom/furniture" instance=ExtResource( 8 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 11.4527 )
+
+[node name="stool" parent="MainRoom/furniture" instance=ExtResource( 9 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.41674, 0, 5.26724 )
+
+[node name="stool2" parent="MainRoom/furniture" instance=ExtResource( 9 )]
+transform = Transform( 0.965926, 0, -0.258819, 0, 1, 0, 0.258819, 0, 0.965926, 4.41674, 0, 9.26724 )
+
+[node name="stool3" parent="MainRoom/furniture" instance=ExtResource( 9 )]
+transform = Transform( 0.965926, 0, -0.258819, 0, 1, 0, 0.258819, 0, 0.965926, -4.58326, 10, 5.26724 )
+
+[node name="stool4" parent="MainRoom/furniture" instance=ExtResource( 9 )]
+transform = Transform( 0.965926, 0, 0.258819, 0, 1, 0, -0.258819, 0, 0.965926, 4.41674, 0, -12.7328 )
+
+[node name="chair" parent="MainRoom/furniture" instance=ExtResource( 10 )]
+transform = Transform( -0.965926, 0, 0.258819, 0, 1, 0, -0.258819, 0, -0.965926, 5, 0, -4 )
+
+[node name="chair2" parent="MainRoom/furniture" instance=ExtResource( 10 )]
+transform = Transform( -1, 0, -5.96046e-08, 0, 1, 0, 5.96046e-08, 0, -1, 5, 0, -8 )
+
+[node name="chair3" parent="MainRoom/furniture" instance=ExtResource( 10 )]
+transform = Transform( 1, 0, 1.47027e-07, 0, 1, 0, -1.47027e-07, 0, 1, -5, 0, -8 )
+
+[node name="chair4" parent="MainRoom/furniture" instance=ExtResource( 10 )]
+transform = Transform( 1.03316e-07, 0, -1, 0, 1, 0, 1, 0, 1.03316e-07, 0, 0, -17 )
 
 [node name="SpawnRoom" type="Spatial" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 60 )
