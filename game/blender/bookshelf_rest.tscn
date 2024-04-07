@@ -6,7 +6,6 @@
 extents = Vector3( 1, 4.5, 2.8 )
 
 [node name="bookshelf_rest" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5, 0 )
 
 [node name="StaticBody" type="StaticBody" parent="." index="1"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -4.5, 0 )

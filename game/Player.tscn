@@ -4,8 +4,9 @@
 [ext_resource path="res://Player.gd" type="Script" id=2]
 [ext_resource path="res://CameraFollow.gd" type="Script" id=3]
 
-[sub_resource type="SphereShape" id=1]
-radius = 0.8
+[sub_resource type="CapsuleShape" id=1]
+radius = 0.756173
+height = 1.56114
 
 [node name="Player" type="KinematicBody"]
 script = ExtResource( 2 )
@@ -23,5 +24,5 @@ script = ExtResource( 3 )
 [node name="Character" parent="Pivot" instance=ExtResource( 1 )]
 
 [node name="CollisionShape" type="CollisionShape" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.189821, 0 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0432833, -0.00924659, 0.485708 )
 shape = SubResource( 1 )
