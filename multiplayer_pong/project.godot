@@ -1,16 +1,10 @@
-; Engine configuration file.
-; It's best edited using the editor UI and not directly,
-; since the parameters that go here are not all obvious.
-;
-; Format:
-;   [section] ; section goes between []
-;   param=value ; assign values to parameters
+[]
 
 config_version=4
 
 [application]
 
-config/name="Pong Multiplayer"
+config/name="Sparki Game"
 config/description="A multiplayer demo of the classical pong game.
 One of the players should press 'host', while the
 other should select the address and press 'join'."
