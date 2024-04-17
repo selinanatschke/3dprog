@@ -29,7 +29,8 @@ func _ready():
 # Callback from SceneTree.
 func _player_connected(_id):
 	# Someone connected, start the game!
-	var pong = load("res://pong.tscn").instance()
+	#var pong = load("res://pong.tscn").instance()
+	var pong = load("res://Map/Map.tscn").instance()
 	# Connect deferred so we can safely erase it from the callback.
 	pong.connect("game_finished", self, "_end_game", [], CONNECT_DEFERRED)
 

@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=2]
+[gd_scene load_steps=23 format=2]
 
 [ext_resource path="res://blender/bookshelf_halffull/bookshelf_halffull.tscn" type="PackedScene" id=1]
 [ext_resource path="res://player/Player.tscn" type="PackedScene" id=2]
@@ -8,6 +8,7 @@
 [ext_resource path="res://blender/table/table.tscn" type="PackedScene" id=6]
 [ext_resource path="res://blender/stool/stool.tscn" type="PackedScene" id=7]
 [ext_resource path="res://blender/bookshelf_full/bookshelf_full.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Map/Map.gd" type="Script" id=9]
 
 [sub_resource type="BoxShape" id=1]
 extents = Vector3( 15, 1, 30 )
@@ -51,13 +52,18 @@ extents = Vector3( 10, 1, 10 )
 size = Vector3( 20, 2, 20 )
 
 [node name="Main" type="Node"]
+script = ExtResource( 9 )
 
 [node name="DirectionalLight" type="DirectionalLight" parent="."]
 transform = Transform( 1, 0, 0, 0, 0.216337, 0.976319, 0, -0.976319, 0.216337, 0, 16, 0 )
 shadow_enabled = true
 shadow_bias = -8.609
 
-[node name="Player" parent="." instance=ExtResource( 2 )]
+[node name="Player1" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 1, 0 )
+
+[node name="Player2" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0 )
 
 [node name="CameraPivot" type="Position3D" parent="."]
 
@@ -341,3 +347,15 @@ transform = Transform( -4.37114e-08, 0, -3.6, 0, 1, 0, 1, 0, -1.57361e-07, 24.85
 transform = Transform( -1, 0, 3.14722e-07, 0, 1, 0, -8.74228e-08, 0, -3.6, 34.6799, 0, 19.8261 )
 
 [node name="Bookshelf" type="Spatial" parent="Room4"]
+
+[node name="ExitGame" type="Button" parent="."]
+visible = false
+margin_left = 280.0
+margin_top = 340.0
+margin_right = 360.0
+margin_bottom = 360.0
+size_flags_horizontal = 2
+size_flags_vertical = 2
+text = "Exit Game"
+
+[connection signal="pressed" from="ExitGame" to="." method="_on_ExitGame_pressed"]
