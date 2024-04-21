@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=2]
+[gd_scene load_steps=26 format=2]
 
 [ext_resource path="res://blender/bookshelf_halffull/bookshelf_halffull.tscn" type="PackedScene" id=1]
 [ext_resource path="res://player/Player.tscn" type="PackedScene" id=2]
@@ -9,6 +9,9 @@
 [ext_resource path="res://blender/stool/stool.tscn" type="PackedScene" id=7]
 [ext_resource path="res://blender/bookshelf_full/bookshelf_full.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Map/Map.gd" type="Script" id=9]
+[ext_resource path="res://blender/bankerLamp/bankerLamp.tscn" type="PackedScene" id=10]
+[ext_resource path="res://blender/doorframe/doorframe.tscn" type="PackedScene" id=11]
+[ext_resource path="res://blender/door/door.tscn" type="PackedScene" id=12]
 
 [sub_resource type="BoxShape" id=1]
 extents = Vector3( 15, 1, 30 )
@@ -187,6 +190,20 @@ transform = Transform( 1.03316e-07, 0, -1, 0, 1, 0, 1, 0, 1.03316e-07, 0, 0, -17
 
 [node name="chair5" parent="MainRoom/furniture" instance=ExtResource( 5 )]
 transform = Transform( 0.866025, 0, 0.5, 0, 1, 0, -0.5, 0, 0.866025, -5, 0, 15.1074 )
+
+[node name="bankerLamp" parent="MainRoom/furniture" instance=ExtResource( 10 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -6.81183 )
+
+[node name="bankerLamp2" parent="MainRoom/furniture" instance=ExtResource( 10 )]
+transform = Transform( -0.507223, 0, -0.861815, 0, 1, 0, 0.861815, 0, -0.507223, -1.15497, 0, 11.7245 )
+
+[node name="Doorway" type="Spatial" parent="MainRoom"]
+
+[node name="door" parent="MainRoom/Doorway" instance=ExtResource( 12 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 15.0645, 4.39448, 21.7308 )
+
+[node name="doorframe" parent="MainRoom/Doorway" instance=ExtResource( 11 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 4.4, 21.691 )
 
 [node name="SpawnRoom" type="Spatial" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 60 )
