@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=2]
+[gd_scene load_steps=29 format=2]
 
 [ext_resource path="res://player/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://blender/basicWall/basicWall.tscn" type="PackedScene" id=2]
@@ -13,6 +13,8 @@
 [ext_resource path="res://blender/doorframe/doorframe.tscn" type="PackedScene" id=11]
 [ext_resource path="res://blender/monitor/monitor.tscn" type="PackedScene" id=12]
 [ext_resource path="res://blender/monitor_flat/monitor_flat.tscn" type="PackedScene" id=13]
+[ext_resource path="res://blender/symbolTOG/SymbolToG-normal.tscn" type="PackedScene" id=14]
+[ext_resource path="res://blender/symbolHP/SybolHP-normal.tscn" type="PackedScene" id=15]
 
 [sub_resource type="BoxShape" id=1]
 extents = Vector3( 15, 1, 30 )
@@ -63,6 +65,7 @@ shadow_enabled = true
 shadow_bias = -8.609
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2 )
 
 [node name="CameraPivot" type="Position3D" parent="."]
 
@@ -369,3 +372,11 @@ transform = Transform( -4.37114e-08, 0, -3.6, 0, 1, 0, 1, 0, -1.57361e-07, 24.85
 transform = Transform( -1, 0, 3.14722e-07, 0, 1, 0, -8.74228e-08, 0, -3.6, 34.6799, 0, 19.8261 )
 
 [node name="Bookshelf" type="Spatial" parent="Room4"]
+
+[node name="Symbols" type="Spatial" parent="."]
+
+[node name="SymbolToG-normal" parent="Symbols" instance=ExtResource( 14 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -4.76837e-07, 3.8273 )
+
+[node name="SybolHP-normal" parent="Symbols" instance=ExtResource( 15 )]
+transform = Transform( 0.475958, 3.91696e-09, -0.15318, 0.15318, -2.49562e-08, 0.475958, -3.91696e-09, -0.5, -2.49562e-08, -13.1809, 2.64696, 10.9061 )
