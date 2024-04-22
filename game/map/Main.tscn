@@ -1,13 +1,18 @@
-[gd_scene load_steps=22 format=2]
+[gd_scene load_steps=27 format=2]
 
 [ext_resource path="res://player/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://blender/basicWall/basicWall.tscn" type="PackedScene" id=2]
+[ext_resource path="res://blender/bankerlamp/bankerLamp.tscn" type="PackedScene" id=3]
+[ext_resource path="res://blender/door/door.tscn" type="PackedScene" id=4]
 [ext_resource path="res://blender/bookshelf_rest/bookshelf_rest.tscn" type="PackedScene" id=5]
 [ext_resource path="res://blender/bookshelf_halffull/bookshelf_halffull.tscn" type="PackedScene" id=6]
 [ext_resource path="res://blender/bookshelf_full/bookshelf_full.tscn" type="PackedScene" id=7]
 [ext_resource path="res://blender/table/table.tscn" type="PackedScene" id=8]
 [ext_resource path="res://blender/stool/stool.tscn" type="PackedScene" id=9]
 [ext_resource path="res://blender/chair/chair.tscn" type="PackedScene" id=10]
+[ext_resource path="res://blender/doorframe/doorframe.tscn" type="PackedScene" id=11]
+[ext_resource path="res://blender/monitor/monitor.tscn" type="PackedScene" id=12]
+[ext_resource path="res://blender/monitor_flat/monitor_flat.tscn" type="PackedScene" id=13]
 
 [sub_resource type="BoxShape" id=1]
 extents = Vector3( 15, 1, 30 )
@@ -181,6 +186,29 @@ transform = Transform( 1.03316e-07, 0, -1, 0, 1, 0, 1, 0, 1.03316e-07, 0, 0, -17
 
 [node name="chair5" parent="MainRoom/furniture" instance=ExtResource( 10 )]
 transform = Transform( 0.866025, 0, 0.5, 0, 1, 0, -0.5, 0, 0.866025, -5, 0, 15.1074 )
+
+[node name="bankerLamp" parent="MainRoom/furniture" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.02549, 0, -4.71126 )
+
+[node name="bankerLamp2" parent="MainRoom/furniture" instance=ExtResource( 3 )]
+transform = Transform( 0.665426, 0, 0.746464, 0, 1, 0, -0.746464, 0, 0.665426, 1.02549, 0, 12.3677 )
+
+[node name="bankerLamp3" parent="MainRoom/furniture" instance=ExtResource( 3 )]
+transform = Transform( 0.665426, 0, 0.746464, 0, 1, 0, -0.746464, 0, 0.665426, 1.02549, 0, 12.3677 )
+
+[node name="monitor" parent="MainRoom/furniture" instance=ExtResource( 12 )]
+transform = Transform( 0.960401, 0, -0.278622, 0, 1, 0, 0.278622, 0, 0.960401, 4.78899, 4.72812, 8.33121 )
+
+[node name="monitor_flat" parent="MainRoom/furniture" instance=ExtResource( 13 )]
+transform = Transform( -8.74228e-08, 0, -2, 0, 2, 0, 2, 0, -8.74228e-08, 13, 6, -12 )
+
+[node name="Doorway" type="Spatial" parent="MainRoom"]
+
+[node name="door" parent="MainRoom/Doorway" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 14.8858, 4.40892, 22.0098 )
+
+[node name="doorframe" parent="MainRoom/Doorway" instance=ExtResource( 11 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 4.4, 22 )
 
 [node name="SpawnRoom" type="Spatial" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 60 )
