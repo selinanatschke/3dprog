@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=2]
+[gd_scene load_steps=33 format=2]
 
 [ext_resource path="res://player/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://blender/basicWall/basicWall.tscn" type="PackedScene" id=2]
@@ -17,6 +17,7 @@
 [ext_resource path="res://blender/symbolHP/SybolHP-normal.tscn" type="PackedScene" id=15]
 [ext_resource path="res://blender/symbolTOG_glowing/SymbolToG-leuchtend.tscn" type="PackedScene" id=16]
 [ext_resource path="res://blender/ground/Boden2.tscn" type="PackedScene" id=17]
+[ext_resource path="res://monitor_flat_broken.tscn" type="PackedScene" id=18]
 [ext_resource path="res://blender/symbolHP_glowing/SybolHP-leuchtend.tscn" type="PackedScene" id=19]
 
 [sub_resource type="BoxShape" id=1]
@@ -123,7 +124,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 2.5, -15, 0, -3 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 3.5, -15, 0, 20 )
 
 [node name="basicWall7" parent="MainRoom/Wall" instance=ExtResource( 2 )]
-transform = Transform( -1, 0, 4.52987e-07, 0, 1, 0, -1.50996e-07, 0, -3, 15, 0, 11 )
+transform = Transform( -1, 0, 4.68087e-07, 0, 1, 0, -1.50996e-07, 0, -3.1, 15, 0, 11 )
 
 [node name="basicWall8" parent="MainRoom/Wall" instance=ExtResource( 2 )]
 transform = Transform( -1, 0, 1.50996e-07, 0, 1, 0, -1.50996e-07, 0, -1, 15, 0, 27 )
@@ -230,11 +231,15 @@ transform = Transform( 0.960401, 0, -0.278622, 0, 1, 0, 0.278622, 0, 0.960401, 4
 
 [node name="monitor_flat" parent="MainRoom/furniture" instance=ExtResource( 13 )]
 transform = Transform( -8.74228e-08, 0, -2, 0, 2, 0, 2, 0, -8.74228e-08, 13, 6, -12 )
+visible = false
+
+[node name="monitor_flat_broken" parent="MainRoom/furniture" instance=ExtResource( 18 )]
+transform = Transform( -8.74228e-08, 0, -2, 0, 2, 0, 2, 0, -8.74228e-08, 13, 6, -12 )
 
 [node name="Doorway" type="Spatial" parent="MainRoom"]
 
 [node name="door" parent="MainRoom/Doorway" instance=ExtResource( 4 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 14.8858, 4.40892, 22.0098 )
+transform = Transform( 0.3, 0, 0, 0, 1, 0, 0, 0, 1, 14.934, 4.30909, 21.9968 )
 
 [node name="doorframe" parent="MainRoom/Doorway" instance=ExtResource( 11 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 4.4, 22 )
