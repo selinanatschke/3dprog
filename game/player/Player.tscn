@@ -6,7 +6,7 @@
 
 [sub_resource type="CapsuleShape" id=1]
 radius = 0.756173
-height = 1.56114
+height = 1.06549
 
 [node name="Player" type="KinematicBody"]
 script = ExtResource( 2 )
@@ -25,5 +25,5 @@ script = ExtResource( 3 )
 transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 1, 0 )
 
 [node name="CollisionShape" type="CollisionShape" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0432833, -0.00924659, 0.485708 )
+transform = Transform( 1, 0, 0, 0, -0.0174524, 0.999848, 0, -0.999848, -0.0174524, 0.0432833, 0.289642, -0.142083 )
 shape = SubResource( 1 )

@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=2]
+[gd_scene load_steps=32 format=2]
 
 [ext_resource path="res://player/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://blender/basicWall/basicWall.tscn" type="PackedScene" id=2]
@@ -15,6 +15,9 @@
 [ext_resource path="res://blender/monitor_flat/monitor_flat.tscn" type="PackedScene" id=13]
 [ext_resource path="res://blender/symbolTOG/SymbolToG-normal.tscn" type="PackedScene" id=14]
 [ext_resource path="res://blender/symbolHP/SybolHP-normal.tscn" type="PackedScene" id=15]
+[ext_resource path="res://blender/symbolTOG_glowing/SymbolToG-leuchtend.tscn" type="PackedScene" id=16]
+[ext_resource path="res://blender/ground/Boden2.tscn" type="PackedScene" id=17]
+[ext_resource path="res://blender/symbolHP_glowing/SybolHP-leuchtend.tscn" type="PackedScene" id=19]
 
 [sub_resource type="BoxShape" id=1]
 extents = Vector3( 15, 1, 30 )
@@ -85,6 +88,18 @@ shape = SubResource( 1 )
 [node name="MeshInstance" type="MeshInstance" parent="MainRoom/Ground"]
 mesh = SubResource( 2 )
 material/0 = SubResource( 13 )
+
+[node name="Boden2" parent="MainRoom/Ground" instance=ExtResource( 17 )]
+transform = Transform( -2.62268e-07, 0, 3, 0, 1, 0, -6, 0, -1.31134e-07, -7, 1, -15 )
+
+[node name="Boden3" parent="MainRoom/Ground" instance=ExtResource( 17 )]
+transform = Transform( -5.24537e-07, 0, 3, 0, 1, 0, -12, 0, -1.31134e-07, -7, 1, 3.0598e-07 )
+
+[node name="Boden4" parent="MainRoom/Ground" instance=ExtResource( 17 )]
+transform = Transform( -2.62268e-07, 0, 3, 0, 1, 0, -6, 0, -1.31134e-07, 7, 1, -15 )
+
+[node name="Boden5" parent="MainRoom/Ground" instance=ExtResource( 17 )]
+transform = Transform( -5.24537e-07, 0, 3, 0, 1, 0, -12, 0, -1.31134e-07, 7, 1, -3.0598e-07 )
 
 [node name="Wall" type="Spatial" parent="MainRoom"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.1, 0 )
@@ -193,11 +208,22 @@ transform = Transform( 0.866025, 0, 0.5, 0, 1, 0, -0.5, 0, 0.866025, -5, 0, 15.1
 [node name="bankerLamp" parent="MainRoom/furniture" instance=ExtResource( 3 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.02549, 0, -4.71126 )
 
+[node name="SpotLight" type="SpotLight" parent="MainRoom/furniture/bankerLamp"]
+transform = Transform( 1, 2.9642e-08, -3.08726e-09, 0, 0.103591, 0.99462, 2.98023e-08, -0.99462, 0.103591, -1.27353, 5.1789, -0.633924 )
+light_energy = 4.376
+light_indirect_energy = 4.817
+light_specular = 5.931
+spot_range = 2.418
+
 [node name="bankerLamp2" parent="MainRoom/furniture" instance=ExtResource( 3 )]
 transform = Transform( 0.665426, 0, 0.746464, 0, 1, 0, -0.746464, 0, 0.665426, 1.02549, 0, 12.3677 )
 
-[node name="bankerLamp3" parent="MainRoom/furniture" instance=ExtResource( 3 )]
-transform = Transform( 0.665426, 0, 0.746464, 0, 1, 0, -0.746464, 0, 0.665426, 1.02549, 0, 12.3677 )
+[node name="SpotLight" type="SpotLight" parent="MainRoom/furniture/bankerLamp2"]
+transform = Transform( 1, 2.98023e-08, -3.72529e-09, 0, 0.103591, 0.99462, 2.98023e-08, -0.99462, 0.103591, -1.27353, 5.1789, -0.633924 )
+light_energy = 4.376
+light_indirect_energy = 4.817
+light_specular = 5.931
+spot_range = 2.418
 
 [node name="monitor" parent="MainRoom/furniture" instance=ExtResource( 12 )]
 transform = Transform( 0.960401, 0, -0.278622, 0, 1, 0, 0.278622, 0, 0.960401, 4.78899, 4.72812, 8.33121 )
@@ -226,6 +252,9 @@ mesh = SubResource( 3 )
 [node name="CollisionShape" type="CollisionShape" parent="SpawnRoom/Ground"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2 )
 shape = SubResource( 4 )
+
+[node name="Boden2" parent="SpawnRoom/Ground" instance=ExtResource( 17 )]
+transform = Transform( -8.74228e-08, 0, 6, 0, 1, 0, -2, 0, -2.62268e-07, -4.37114e-08, 1, -1 )
 
 [node name="Wall" type="Spatial" parent="SpawnRoom"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.1, 0 )
@@ -256,6 +285,9 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 0 )
 mesh = SubResource( 6 )
 material/0 = SubResource( 13 )
 
+[node name="Boden2" parent="Room1/Ground" instance=ExtResource( 17 )]
+transform = Transform( -1.74846e-07, 0, 4, 0, 1, 0, -4, 0, -1.74846e-07, -4, 1, 0 )
+
 [node name="Walls" type="Spatial" parent="Room1"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.1, 0 )
 
@@ -280,6 +312,9 @@ shape = SubResource( 7 )
 [node name="MeshInstance" type="MeshInstance" parent="Room2/Ground"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, 16 )
 mesh = SubResource( 8 )
+
+[node name="Boden2" parent="Room2/Ground" instance=ExtResource( 17 )]
+transform = Transform( -2.62268e-07, 0, 2.5, 0, 1, 0, -6, 0, -1.09278e-07, -6, 1, 16 )
 
 [node name="Walls" type="Spatial" parent="Room2"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.1, 0 )
@@ -318,6 +353,9 @@ shape = SubResource( 9 )
 [node name="MeshInstance" type="MeshInstance" parent="Room3/Ground"]
 mesh = SubResource( 10 )
 material/0 = SubResource( 13 )
+
+[node name="Boden2" parent="Room3/Ground" instance=ExtResource( 17 )]
+transform = Transform( -2.62268e-07, 0, 2.5, 0, 1, 0, -6, 0, -1.09278e-07, 0, 1, 0 )
 
 [node name="Walls" type="Spatial" parent="Room3"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.1, 0 )
@@ -359,6 +397,9 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0 )
 mesh = SubResource( 12 )
 material/0 = SubResource( 13 )
 
+[node name="Boden2" parent="Room4/Ground" instance=ExtResource( 17 )]
+transform = Transform( -1.74846e-07, 0, 4, 0, 1, 0, -4, 0, -1.74846e-07, 1, 1, 0 )
+
 [node name="Walls" type="Spatial" parent="Room4"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.1, 0 )
 
@@ -376,7 +417,15 @@ transform = Transform( -1, 0, 3.14722e-07, 0, 1, 0, -8.74228e-08, 0, -3.6, 34.67
 [node name="Symbols" type="Spatial" parent="."]
 
 [node name="SymbolToG-normal" parent="Symbols" instance=ExtResource( 14 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -4.76837e-07, 3.8273 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3.827 )
 
 [node name="SybolHP-normal" parent="Symbols" instance=ExtResource( 15 )]
-transform = Transform( 0.475958, 3.91696e-09, -0.15318, 0.15318, -2.49562e-08, 0.475958, -3.91696e-09, -0.5, -2.49562e-08, -13.1809, 2.64696, 10.9061 )
+transform = Transform( 0.475958, 3.91696e-09, -0.15318, 0.15318, -2.49562e-08, 0.475958, -3.91696e-09, -0.5, -2.49562e-08, -13.1809, 2.64696, 10.8554 )
+
+[node name="SymbolToG-leuchtend" parent="Symbols" instance=ExtResource( 16 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3.827 )
+visible = false
+
+[node name="SybolHP-leuchtend" parent="Symbols" instance=ExtResource( 19 )]
+transform = Transform( 0.475958, 1.05091e-09, -0.15318, 0.15318, -6.69571e-09, 0.475958, -1.05091e-09, -0.5, -6.69571e-09, -13.181, 2.647, 10.855 )
+visible = false

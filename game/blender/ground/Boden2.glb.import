@@ -2,12 +2,12 @@
 
 importer="scene"
 type="PackedScene"
-path="res://.import/Bodendielen.glb-31520012f15d9de9267e3f25be0b9568.scn"
+path="res://.import/Boden2.glb-37df785e4e20fce1884508a0328fb69e.scn"
 
 [deps]
 
-source_file="res://blender/ground/Bodendielen.glb"
-dest_files=[ "res://.import/Bodendielen.glb-31520012f15d9de9267e3f25be0b9568.scn" ]
+source_file="res://blender/ground/Boden2.glb"
+dest_files=[ "res://.import/Boden2.glb-37df785e4e20fce1884508a0328fb69e.scn" ]
 
 [params]
 
