@@ -17,7 +17,6 @@ func _on_Area_input_event(camera, event, position, normal, shape_idx):
 			door_object_glowing.visible = true
 			
 			if door_object_glowing.visible and door_object_glowing2.visible:
-				print("auf", door_object_glowing2.visible)
 				door.translation = Vector3(16.604, 4.309, 20.711)
 				door.rotation_degrees = Vector3(0, 80, 0)
 

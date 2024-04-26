@@ -72,6 +72,7 @@ surfaces/0 = {
 
 [node name="SymbolHPleuchtend" type="MeshInstance" parent="." index="1"]
 transform = Transform( -2.18557e-08, -0.5, -2.18557e-08, 0, -2.18557e-08, 0.5, -0.5, 2.18557e-08, 9.55343e-16, -0.126668, 0, 0.0639529 )
+visible = false
 mesh = SubResource( 1 )
 
 [node name="SymbolHPnormal" type="MeshInstance" parent="." index="2"]
@@ -84,6 +85,7 @@ mesh = SubResource( 3 )
 
 [node name="SymbolTOGleuchtend" type="MeshInstance" parent="." index="4"]
 transform = Transform( -8.74228e-09, -0.2, 0, 0.2, -8.74228e-09, 0, 0, 0, 0.2, -0.397, 1.877, -0.479 )
+visible = false
 mesh = SubResource( 4 )
 
 [node name="StaticBody" type="StaticBody" parent="." index="5"]
