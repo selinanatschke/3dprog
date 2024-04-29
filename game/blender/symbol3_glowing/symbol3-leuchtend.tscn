@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://blender/symbol3_glowing/symbol3-leuchtend.glb" type="PackedScene" id=1]
+
+[node name="symbol3-leuchtend" instance=ExtResource( 1 )]

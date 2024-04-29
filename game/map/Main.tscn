@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=2]
+[gd_scene load_steps=37 format=2]
 
 [ext_resource path="res://player/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://blender/basicWall/basicWall.tscn" type="PackedScene" id=2]
@@ -17,8 +17,12 @@
 [ext_resource path="res://blender/symbolHP/SybolHP-normal.tscn" type="PackedScene" id=15]
 [ext_resource path="res://blender/symbolTOG_glowing/SymbolToG-leuchtend.tscn" type="PackedScene" id=16]
 [ext_resource path="res://blender/ground/Boden2.tscn" type="PackedScene" id=17]
-[ext_resource path="res://monitor_flat_broken.tscn" type="PackedScene" id=18]
+[ext_resource path="res://blender/monitor_broken/monitor_flat_broken.tscn" type="PackedScene" id=18]
 [ext_resource path="res://blender/symbolHP_glowing/SybolHP-leuchtend.tscn" type="PackedScene" id=19]
+[ext_resource path="res://blender/rabe/Rabe.tscn" type="PackedScene" id=20]
+[ext_resource path="res://blender/stack_brown/StapelBraun.tscn" type="PackedScene" id=21]
+[ext_resource path="res://blender/stack_pink/StapelRosa.tscn" type="PackedScene" id=22]
+[ext_resource path="res://blender/book/buch.tscn" type="PackedScene" id=23]
 
 [sub_resource type="BoxShape" id=1]
 extents = Vector3( 15, 1, 30 )
@@ -236,6 +240,36 @@ visible = false
 [node name="monitor_flat_broken" parent="MainRoom/furniture" instance=ExtResource( 18 )]
 transform = Transform( -8.74228e-08, 0, -2, 0, 2, 0, 2, 0, -8.74228e-08, 13, 6, -12 )
 
+[node name="Rabe" parent="MainRoom/furniture" instance=ExtResource( 20 )]
+transform = Transform( 0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 10.1901, 7.71606, 29.8782 )
+
+[node name="StapelBraun" parent="MainRoom/furniture" instance=ExtResource( 21 )]
+transform = Transform( 0.372016, 0, 0.334072, 0, 0.5, 0, -0.334072, 0, 0.372016, 0.957184, 3.52238, -11.1228 )
+
+[node name="StapelBraun2" parent="MainRoom/furniture" instance=ExtResource( 21 )]
+transform = Transform( 0.663297, 0, 0.223688, 0, 0.7, 0, -0.223688, 0, 0.663297, 9.63114, 4.52255, -2.88257 )
+
+[node name="StapelBraun3" parent="MainRoom/furniture" instance=ExtResource( 21 )]
+transform = Transform( 0.663297, 0, 0.223688, 0, 0.7, 0, -0.223688, 0, 0.663297, -11.589, 0.0403957, -26.4047 )
+
+[node name="StapelBraun4" parent="MainRoom/furniture" instance=ExtResource( 21 )]
+transform = Transform( 0.663297, 0, 0.223688, 0, 0.7, 0, -0.223688, 0, 0.663297, 12.8481, 0.0403957, 26.4302 )
+
+[node name="StapelRosa" parent="MainRoom/furniture" instance=ExtResource( 22 )]
+transform = Transform( 0.599967, 6.5795e-05, 0.00628273, 0, 0.599967, -0.00628307, -0.00628307, 0.00628273, 0.599934, 11.0374, 0.0970268, 27.6036 )
+
+[node name="StapelRosa2" parent="MainRoom/furniture" instance=ExtResource( 22 )]
+transform = Transform( 0.51472, 6.57949e-05, -0.308323, -0.00328495, 0.599967, -0.00535594, 0.308305, 0.00628273, 0.514693, 0.958683, 3.52849, 16.6387 )
+
+[node name="StapelRosa3" parent="MainRoom/furniture" instance=ExtResource( 22 )]
+transform = Transform( -0.253647, 6.57946e-05, -0.543749, -0.0056659, 0.599967, 0.00271562, 0.54372, 0.00628273, -0.253633, 3.93815, 0.658533, -25.9429 )
+
+[node name="buch" parent="MainRoom/furniture" instance=ExtResource( 23 )]
+transform = Transform( 0.499312, 0, 0.332698, 0, 0.6, 0, -0.332698, 0, 0.499312, -1.3674, 3.55016, 16.7113 )
+
+[node name="buch2" parent="MainRoom/furniture" instance=ExtResource( 23 )]
+transform = Transform( -0.0897621, 0.575153, -0.145404, -0.00808347, 0.145859, 0.581945, 0.593193, 0.0890199, -0.0140723, 1.45214, 4.32701, 7.78684 )
+
 [node name="Doorway" type="Spatial" parent="MainRoom"]
 
 [node name="door" parent="MainRoom/Doorway" instance=ExtResource( 4 )]
@@ -347,6 +381,17 @@ transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -18.258
 [node name="bookshelf_full3" parent="Room2/Bookshelf" instance=ExtResource( 7 )]
 transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -24.0589, 4.39037, 1.11392 )
 
+[node name="furniture" type="Spatial" parent="Room2"]
+
+[node name="StapelRosa3" parent="Room2/furniture" instance=ExtResource( 22 )]
+transform = Transform( 0.164889, 6.57944e-05, -0.576898, -0.00605891, 0.599967, -0.00166333, 0.576867, 0.00628273, 0.16488, -25.2418, 0.354238, 3.42123 )
+
+[node name="StapelBraun2" parent="Room2/furniture" instance=ExtResource( 21 )]
+transform = Transform( 0.663297, 0, 0.223688, 0, 0.7, 0, -0.223688, 0, 0.663297, -22.4978, 4.52255, 18.7721 )
+
+[node name="buch" parent="Room2/furniture" instance=ExtResource( 23 )]
+transform = Transform( 0.6, 0, 0, 0, 0.207975, 0.562802, 0, -0.562802, 0.207975, -25.5622, 1.02583, 16.925 )
+
 [node name="Room3" type="Spatial" parent="."]
 
 [node name="Ground" type="StaticBody" parent="Room3"]
@@ -387,6 +432,11 @@ transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 23.8892
 
 [node name="bookshelf_full3" parent="Room3/Bookshelf" instance=ExtResource( 7 )]
 transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 18.1204, 4.47093, 2.69809 )
+
+[node name="furniture" type="Spatial" parent="Room3"]
+
+[node name="StapelBraun2" parent="Room3/furniture" instance=ExtResource( 21 )]
+transform = Transform( 0.663297, 0, 0.223688, 0, 0.7, 0, -0.223688, 0, 0.663297, 23.4638, 4.52255, -8.49512 )
 
 [node name="Room4" type="Spatial" parent="."]
 
