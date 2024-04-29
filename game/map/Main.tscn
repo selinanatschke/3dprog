@@ -1,4 +1,4 @@
-[gd_scene load_steps=37 format=2]
+[gd_scene load_steps=38 format=2]
 
 [ext_resource path="res://player/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://blender/basicWall/basicWall.tscn" type="PackedScene" id=2]
@@ -23,6 +23,7 @@
 [ext_resource path="res://blender/stack_brown/StapelBraun.tscn" type="PackedScene" id=21]
 [ext_resource path="res://blender/stack_pink/StapelRosa.tscn" type="PackedScene" id=22]
 [ext_resource path="res://blender/book/buch.tscn" type="PackedScene" id=23]
+[ext_resource path="res://blender/frame/frame.tscn" type="PackedScene" id=24]
 
 [sub_resource type="BoxShape" id=1]
 extents = Vector3( 15, 1, 30 )
@@ -247,7 +248,7 @@ transform = Transform( 0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 10.1901, 7.71606, 29.878
 transform = Transform( 0.372016, 0, 0.334072, 0, 0.5, 0, -0.334072, 0, 0.372016, 0.957184, 3.52238, -11.1228 )
 
 [node name="StapelBraun2" parent="MainRoom/furniture" instance=ExtResource( 21 )]
-transform = Transform( 0.663297, 0, 0.223688, 0, 0.7, 0, -0.223688, 0, 0.663297, 9.63114, 4.52255, -2.88257 )
+transform = Transform( 0.663297, 0, 0.223688, 0, 0.7, 0, -0.223688, 0, 0.663297, 9.63114, 0.0402951, -2.88257 )
 
 [node name="StapelBraun3" parent="MainRoom/furniture" instance=ExtResource( 21 )]
 transform = Transform( 0.663297, 0, 0.223688, 0, 0.7, 0, -0.223688, 0, 0.663297, -11.589, 0.0403957, -26.4047 )
@@ -387,7 +388,7 @@ transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -24.058
 transform = Transform( 0.164889, 6.57944e-05, -0.576898, -0.00605891, 0.599967, -0.00166333, 0.576867, 0.00628273, 0.16488, -25.2418, 0.354238, 3.42123 )
 
 [node name="StapelBraun2" parent="Room2/furniture" instance=ExtResource( 21 )]
-transform = Transform( 0.663297, 0, 0.223688, 0, 0.7, 0, -0.223688, 0, 0.663297, -22.4978, 4.52255, 18.7721 )
+transform = Transform( 0.663297, 0, 0.223688, 0, 0.7, 0, -0.223688, 0, 0.663297, -22.4978, -0.0207582, 18.7721 )
 
 [node name="buch" parent="Room2/furniture" instance=ExtResource( 23 )]
 transform = Transform( 0.6, 0, 0, 0, 0.207975, 0.562802, 0, -0.562802, 0.207975, -25.5622, 1.02583, 16.925 )
@@ -436,7 +437,7 @@ transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 18.1204
 [node name="furniture" type="Spatial" parent="Room3"]
 
 [node name="StapelBraun2" parent="Room3/furniture" instance=ExtResource( 21 )]
-transform = Transform( 0.663297, 0, 0.223688, 0, 0.7, 0, -0.223688, 0, 0.663297, 23.4638, 4.52255, -8.49512 )
+transform = Transform( 0.663297, 0, 0.223688, 0, 0.7, 0, -0.223688, 0, 0.663297, 23.4638, 0.0967841, -8.49512 )
 
 [node name="Room4" type="Spatial" parent="."]
 
@@ -484,3 +485,6 @@ visible = false
 [node name="SybolHP-leuchtend" parent="Symbols" instance=ExtResource( 19 )]
 transform = Transform( 0.475958, 1.05091e-09, -0.15318, 0.15318, -6.69571e-09, 0.475958, -1.05091e-09, -0.5, -6.69571e-09, -13.181, 2.647, 10.855 )
 visible = false
+
+[node name="frame" parent="Symbols" instance=ExtResource( 24 )]
+transform = Transform( -2.62268e-08, 0, -0.6, 0, 0.6, 0, 0.6, 0, -2.62268e-08, 18.4442, 5.20337, -25.6572 )
