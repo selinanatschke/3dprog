@@ -18,6 +18,10 @@ config/name="Squash the Creeps (3D)"
 run/main_scene="res://map/Main.tscn"
 config/icon="res://icon.png"
 
+[autoload]
+
+DialogManager="*res://textbox/DialogManager.gd"
+
 [input]
 
 move_left={

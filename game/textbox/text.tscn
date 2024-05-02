@@ -1,0 +1,39 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://textbox/Lugrasimo-Regular.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://textbox/parchment_alpha.png" type="Texture" id=2]
+[ext_resource path="res://textbox/text.gd" type="Script" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+size = 27
+font_data = ExtResource( 1 )
+
+[node name="CanvasLayer" type="CanvasLayer"]
+script = ExtResource( 3 )
+
+[node name="TextureButton" type="TextureButton" parent="."]
+margin_left = 32.0
+margin_top = 79.0
+margin_right = 672.0
+margin_bottom = 559.0
+rect_scale = Vector2( 1.5, 1 )
+texture_normal = ExtResource( 2 )
+
+[node name="Label" type="Label" parent="."]
+margin_left = 131.0
+margin_top = 158.0
+margin_right = 870.0
+margin_bottom = 475.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "In der Welt der Rätsel, ein mystisches Land, 
+	Wo Symbole versteckt, an der Wand und am Rand.
+	Suche oben, unten und mitte so weit, 
+	Die Zeichen zu finden, ist des Rätsels Geleit. 
+	In der Bibliothek der alten Geschichten, 
+	Hast du ein paar Pflichen. 
+	Aktivierst du die 3 Zeichen, 
+	wird die Türe weichen."
+align = 1
+
+[connection signal="pressed" from="TextureButton" to="." method="_on_TextureButton_pressed"]
