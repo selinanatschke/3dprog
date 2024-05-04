@@ -34,20 +34,26 @@ extents = Vector3( 15, 1, 30 )
 size = Vector3( 30, 2, 60 )
 
 [sub_resource type="SpatialMaterial" id=13]
-albedo_color = Color( 0.262745, 0.176471, 0.0745098, 1 )
+albedo_color = Color( 0.529412, 0.423529, 0.290196, 1 )
 
 [sub_resource type="CubeMesh" id=3]
 material = SubResource( 13 )
 size = Vector3( 30, 2, 10 )
+
+[sub_resource type="CubeMesh" id=6]
+size = Vector3( 20, 2, 20 )
+
+[sub_resource type="CubeMesh" id=10]
+size = Vector3( 12, 2, 30 )
+
+[sub_resource type="CubeMesh" id=12]
+size = Vector3( 20, 2, 20 )
 
 [sub_resource type="BoxShape" id=4]
 extents = Vector3( 15, 1, 5 )
 
 [sub_resource type="BoxShape" id=5]
 extents = Vector3( 10, 1, 10 )
-
-[sub_resource type="CubeMesh" id=6]
-size = Vector3( 20, 2, 20 )
 
 [sub_resource type="BoxShape" id=7]
 extents = Vector3( 6, 1, 15 )
@@ -59,14 +65,8 @@ size = Vector3( 12, 2, 30 )
 [sub_resource type="BoxShape" id=9]
 extents = Vector3( 6, 1, 15 )
 
-[sub_resource type="CubeMesh" id=10]
-size = Vector3( 12, 2, 30 )
-
 [sub_resource type="BoxShape" id=11]
 extents = Vector3( 10, 1, 10 )
-
-[sub_resource type="CubeMesh" id=12]
-size = Vector3( 20, 2, 20 )
 
 [node name="Main" type="Node"]
 
@@ -164,16 +164,16 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -28.7386, 4.44468, 20 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -28.6045, 4.473, 13.6129 )
 
 [node name="bookshelf_full3" parent="MainRoom/Bookshelf" instance=ExtResource( 7 )]
-transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -25, 4.39037, -29 )
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -25, 4.39037, -28.6796 )
 
 [node name="bookshelf_rest3" parent="MainRoom/Bookshelf" instance=ExtResource( 5 )]
-transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -19, 4.42032, -29 )
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -19, 4.42032, -28.6796 )
 
 [node name="bookshelf_halffull3" parent="MainRoom/Bookshelf" instance=ExtResource( 6 )]
-transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -8.73115, 4.39042, -29.0298 )
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -8.73115, 4.39042, -28.7094 )
 
 [node name="bookshelf_full4" parent="MainRoom/Bookshelf" instance=ExtResource( 7 )]
-transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -3, 4.4176, -29 )
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -3, 4.4176, -28.6796 )
 
 [node name="bookshelf_rest4" parent="MainRoom/Bookshelf" instance=ExtResource( 5 )]
 transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -1.27203, 4.35488, 14 )
@@ -286,6 +286,40 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 4.4, 22 )
 
 [node name="papersheet" parent="MainRoom" instance=ExtResource( 25 )]
 transform = Transform( 0.926141, 0, 0.377178, 0, 1, 0, -0.377178, 0, 0.926141, 13.8185, 0.109478, 23.7709 )
+
+[node name="Ceiling" type="StaticBody" parent="MainRoom"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 9.81383, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="MainRoom/Ceiling"]
+shape = SubResource( 1 )
+
+[node name="MeshInstance" type="MeshInstance" parent="MainRoom/Ceiling"]
+mesh = SubResource( 2 )
+material/0 = SubResource( 13 )
+
+[node name="MeshInstance2" type="MeshInstance" parent="MainRoom/Ceiling"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 33 )
+mesh = SubResource( 3 )
+
+[node name="MeshInstance3" type="MeshInstance" parent="MainRoom/Ceiling"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 25, 0, 20 )
+mesh = SubResource( 6 )
+material/0 = SubResource( 13 )
+
+[node name="MeshInstance4" type="MeshInstance" parent="MainRoom/Ceiling"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -21, 0, 15 )
+mesh = SubResource( 10 )
+material/0 = SubResource( 13 )
+
+[node name="MeshInstance5" type="MeshInstance" parent="MainRoom/Ceiling"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -25, 0, -14 )
+mesh = SubResource( 12 )
+material/0 = SubResource( 13 )
+
+[node name="MeshInstance6" type="MeshInstance" parent="MainRoom/Ceiling"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 21, 0, -11 )
+mesh = SubResource( 10 )
+material/0 = SubResource( 13 )
 
 [node name="SpawnRoom" type="Spatial" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 60 )

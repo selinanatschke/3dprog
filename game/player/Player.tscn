@@ -15,9 +15,12 @@ script = ExtResource( 2 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.66751, 0 )
 
 [node name="Camera" type="Camera" parent="target"]
-transform = Transform( 1, 0, 0, 0, 0.707107, 0.707107, 0, -0.707107, 0.707107, 0, 5.33249, 9 )
+transform = Transform( 1, 0, 0, 0, 0.921063, 0.389413, 0, -0.389413, 0.921063, 0, 5.33249, 9 )
 current = true
+fov = 72.0
 script = ExtResource( 3 )
+distance = 3.0
+height = 1.0
 
 [node name="Pivot" type="Spatial" parent="."]
 
