@@ -7,6 +7,8 @@
 extents = Vector3( 1.16761, 0.18838, 1.48139 )
 
 [node name="FlyingBook" type="KinematicBody"]
+collision_layer = 2
+collision_mask = 2
 script = ExtResource( 2 )
 
 [node name="Pivot" type="Spatial" parent="."]

@@ -107,6 +107,8 @@ size = 60.0
 
 [node name="Ground" type="StaticBody" parent="MainRoom"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0 )
+collision_layer = 4
+collision_mask = 0
 
 [node name="CollisionShape" type="CollisionShape" parent="MainRoom/Ground"]
 shape = SubResource( 1 )
@@ -574,7 +576,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0 )
 curve = SubResource( 16 )
 
 [node name="PathFollow" type="PathFollow" parent="SpawnPath"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.097, 1, 3.111 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 13, 0, 29 )
 
 [node name="BookTimer" type="Timer" parent="."]
 wait_time = 0.5
