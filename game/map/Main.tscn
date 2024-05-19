@@ -1,4 +1,4 @@
-[gd_scene load_steps=45 format=2]
+[gd_scene load_steps=48 format=2]
 
 [ext_resource path="res://player/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://blender/basicWall/basicWall.tscn" type="PackedScene" id=2]
@@ -28,6 +28,9 @@
 [ext_resource path="res://textbox/text.tscn" type="PackedScene" id=26]
 [ext_resource path="res://map/Main.gd" type="Script" id=27]
 [ext_resource path="res://flying_books/flying_book.tscn" type="PackedScene" id=28]
+[ext_resource path="res://monitor/monitor.tscn" type="PackedScene" id=29]
+[ext_resource path="res://blender/old_book/schloss.tscn" type="PackedScene" id=30]
+[ext_resource path="res://blender/old_book/altesbuch.tscn" type="PackedScene" id=31]
 
 [sub_resource type="BoxShape" id=1]
 extents = Vector3( 15, 1, 30 )
@@ -89,10 +92,16 @@ flying_book_scene = ExtResource( 28 )
 [node name="Paper" parent="." instance=ExtResource( 26 )]
 visible = false
 
+[node name="Monitor" parent="." instance=ExtResource( 29 )]
+visible = false
+
+[node name="Schloss" parent="." instance=ExtResource( 30 )]
+visible = false
+
 [node name="DirectionalLight" type="DirectionalLight" parent="."]
 transform = Transform( 1, 0, 0, 0, 0.216337, 0.976319, 0, -0.976319, 0.216337, 0, 16, 0 )
 shadow_enabled = true
-shadow_bias = -8.609
+shadow_bias = -5.0
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2 )
@@ -304,6 +313,9 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 4.4, 22 )
 
 [node name="papersheet" parent="MainRoom" instance=ExtResource( 25 )]
 transform = Transform( 0.926141, 0, 0.377178, 0, 1, 0, -0.377178, 0, 0.926141, 13.8185, 0.109478, 23.7709 )
+
+[node name="altesbuch" parent="MainRoom" instance=ExtResource( 31 )]
+transform = Transform( 0.582693, 0, -0.387903, 0, 0.7, 0, 0.387903, 0, 0.582693, 0, 3.48733, -1.27637 )
 
 [node name="Ceiling" type="StaticBody" parent="MainRoom"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 9.81383, 0 )
