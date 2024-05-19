@@ -1,4 +1,4 @@
-[gd_scene load_steps=48 format=2]
+[gd_scene load_steps=51 format=2]
 
 [ext_resource path="res://player/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://blender/basicWall/basicWall.tscn" type="PackedScene" id=2]
@@ -31,6 +31,9 @@
 [ext_resource path="res://monitor/monitor.tscn" type="PackedScene" id=29]
 [ext_resource path="res://blender/old_book/schloss.tscn" type="PackedScene" id=30]
 [ext_resource path="res://blender/old_book/altesbuch.tscn" type="PackedScene" id=31]
+[ext_resource path="res://blender/tresor/Tresor.tscn" type="PackedScene" id=32]
+[ext_resource path="res://blender/tresor_open/Tresor-offen.tscn" type="PackedScene" id=33]
+[ext_resource path="res://blender/tresor/tresor_input.tscn" type="PackedScene" id=34]
 
 [sub_resource type="BoxShape" id=1]
 extents = Vector3( 15, 1, 30 )
@@ -96,6 +99,9 @@ visible = false
 visible = false
 
 [node name="Schloss" parent="." instance=ExtResource( 30 )]
+visible = false
+
+[node name="TresorInput" parent="." instance=ExtResource( 34 )]
 visible = false
 
 [node name="DirectionalLight" type="DirectionalLight" parent="."]
@@ -412,6 +418,16 @@ transform = Transform( -4.37114e-08, 0, -3.6, 0, 1, 0, 1, 0, -1.57361e-07, -25, 
 
 [node name="basicWall4" parent="Room1/Walls" instance=ExtResource( 2 )]
 transform = Transform( -1, 0, 3.14722e-07, 0, 1, 0, -8.74228e-08, 0, -3.6, -35, 0, -14 )
+
+[node name="stool" parent="Room1" instance=ExtResource( 9 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -32.6348, 0.0377865, -14.0009 )
+
+[node name="Tresor" parent="Room1" instance=ExtResource( 32 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -32.7207, 2.73146, -13.9636 )
+
+[node name="Tresor-offen" parent="Room1" instance=ExtResource( 33 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -32.7207, 2.73146, -13.9636 )
+visible = false
 
 [node name="Room2" type="Spatial" parent="."]
 
