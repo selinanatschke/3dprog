@@ -1,4 +1,4 @@
-[gd_scene load_steps=53 format=2]
+[gd_scene load_steps=54 format=2]
 
 [ext_resource path="res://player/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://blender/basicWall/basicWall.tscn" type="PackedScene" id=2]
@@ -36,6 +36,7 @@
 [ext_resource path="res://blender/tresor/tresor_input.tscn" type="PackedScene" id=34]
 [ext_resource path="res://blender/lamp/lampv2.tscn" type="PackedScene" id=35]
 [ext_resource path="res://blender/mainLamp/deckenlampe.tscn" type="PackedScene" id=36]
+[ext_resource path="res://blender/ceilingLamp/lampv3.tscn" type="PackedScene" id=37]
 
 [sub_resource type="CubeMesh" id=2]
 size = Vector3( 30, 2, 60 )
@@ -108,6 +109,7 @@ visible = false
 
 [node name="DirectionalLight" type="DirectionalLight" parent="."]
 transform = Transform( 1, 0, 0, 0, 0.216337, 0.976319, 0, -0.976319, 0.216337, 0, 16, 0 )
+visible = false
 shadow_enabled = true
 shadow_bias = -5.0
 
@@ -123,7 +125,6 @@ size = 60.0
 
 [node name="Ceiling" type="StaticBody" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 9.81383, 0 )
-visible = false
 
 [node name="MeshInstance" type="MeshInstance" parent="Ceiling"]
 mesh = SubResource( 2 )
@@ -659,5 +660,17 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 7.5, 11.6596 )
 
 [node name="deckenlampe7" parent="Lamps" instance=ExtResource( 36 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 7.5, 11.6596 )
+
+[node name="lampv3" parent="Lamps" instance=ExtResource( 37 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -20.752, 7.5, 14.281 )
+
+[node name="lampv4" parent="Lamps" instance=ExtResource( 37 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 21.248, 7.5, -11.719 )
+
+[node name="lampv5" parent="Lamps" instance=ExtResource( 37 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 24.248, 7.5, 19.281 )
+
+[node name="lampv6" parent="Lamps" instance=ExtResource( 37 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.247999, 7.5, 35.281 )
 
 [connection signal="timeout" from="BookTimer" to="." method="_on_BookTimer_timeout"]
