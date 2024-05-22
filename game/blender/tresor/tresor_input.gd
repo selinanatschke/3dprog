@@ -6,6 +6,7 @@ onready var tresor_closed: Spatial = get_node("/root/Main/Room1/Tresor")
 var code =[]
 
 func _on_TextureButton_pressed():
+	labels.text = ""
 	self.visible = false
 
 
