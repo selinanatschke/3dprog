@@ -22,4 +22,25 @@ margin_right = 996.0
 margin_bottom = 71.0
 texture_normal = ExtResource( 3 )
 
+[node name="7" type="Button" parent="."]
+modulate = Color( 1, 1, 1, 0 )
+margin_left = 132.0
+margin_top = 223.0
+margin_right = 390.0
+margin_bottom = 294.0
+
+[node name="8" type="Button" parent="."]
+modulate = Color( 1, 1, 1, 0 )
+margin_left = 388.0
+margin_top = 224.0
+margin_right = 646.0
+margin_bottom = 295.0
+
+[node name="9" type="Button" parent="."]
+modulate = Color( 1, 1, 1, 0 )
+margin_left = 643.0
+margin_top = 223.0
+margin_right = 901.0
+margin_bottom = 294.0
+
 [connection signal="pressed" from="TextureButton" to="." method="_on_TextureButton_pressed"]
