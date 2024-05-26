@@ -12,14 +12,11 @@ onready var layer7: TextureRect = get_node("/root/Main/CableRollLayer/7")
 onready var layer6: TextureRect = get_node("/root/Main/CableRollLayer/6")
 onready var layer2: TextureRect = get_node("/root/Main/CableRollLayer/2")
 
-var layerArray = []
-
 var velocity = Vector3.ZERO
 
 func _ready():
 	add_to_group("mob")
 	# Initialize the layerArray after all onready variables are initialized
-	layerArray = [layer4, layer7, layer6, layer2]
 
 func _physics_process(_delta):
 	move_and_slide(velocity)
