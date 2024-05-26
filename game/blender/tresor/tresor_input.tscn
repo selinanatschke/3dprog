@@ -37,24 +37,24 @@ align = 1
 [node name="TextureButton" type="TextureButton" parent="."]
 margin_left = 956.0
 margin_top = 31.0
-margin_right = 996.0
-margin_bottom = 71.0
+margin_right = 1001.0
+margin_bottom = 78.0
 texture_normal = ExtResource( 3 )
 
 [node name="1" type="TextureButton" parent="."]
 margin_left = 517.0
 margin_top = 127.0
-margin_right = 704.0
-margin_bottom = 315.0
-rect_scale = Vector2( 0.27, 0.27 )
+margin_right = 646.0
+margin_bottom = 255.0
+rect_scale = Vector2( 0.4, 0.4 )
 texture_normal = ExtResource( 4 )
 texture_pressed = ExtResource( 5 )
 
 [node name="Label" type="Label" parent="1"]
-margin_left = 74.0741
-margin_top = 55.5555
-margin_right = 114.074
-margin_bottom = 130.556
+margin_left = 45.0
+margin_top = 17.5
+margin_right = 84.9999
+margin_bottom = 92.5005
 rect_pivot_offset = Vector2( 74.074, 192.593 )
 custom_colors/font_color = Color( 0.556863, 0.529412, 0.529412, 1 )
 custom_fonts/font = SubResource( 1 )
@@ -64,17 +64,17 @@ align = 1
 [node name="2" type="TextureButton" parent="."]
 margin_left = 572.0
 margin_top = 127.0
-margin_right = 759.0
-margin_bottom = 315.0
-rect_scale = Vector2( 0.27, 0.27 )
+margin_right = 701.0
+margin_bottom = 255.0
+rect_scale = Vector2( 0.4, 0.4 )
 texture_normal = ExtResource( 4 )
 texture_pressed = ExtResource( 5 )
 
 [node name="Label" type="Label" parent="2"]
-margin_left = 74.0741
-margin_top = 55.5555
-margin_right = 114.074
-margin_bottom = 130.556
+margin_left = 45.0
+margin_top = 17.5
+margin_right = 84.9999
+margin_bottom = 92.5005
 custom_colors/font_color = Color( 0.556863, 0.529412, 0.529412, 1 )
 custom_fonts/font = SubResource( 1 )
 text = "2"
@@ -83,17 +83,17 @@ align = 1
 [node name="3" type="TextureButton" parent="."]
 margin_left = 625.0
 margin_top = 127.0
-margin_right = 812.0
-margin_bottom = 315.0
-rect_scale = Vector2( 0.27, 0.27 )
+margin_right = 754.0
+margin_bottom = 260.0
+rect_scale = Vector2( 0.4, 0.4 )
 texture_normal = ExtResource( 4 )
 texture_pressed = ExtResource( 5 )
 
 [node name="Label" type="Label" parent="3"]
-margin_left = 74.0741
-margin_top = 55.5555
-margin_right = 114.074
-margin_bottom = 130.556
+margin_left = 45.0
+margin_top = 17.5
+margin_right = 84.9999
+margin_bottom = 92.5005
 custom_colors/font_color = Color( 0.556863, 0.529412, 0.529412, 1 )
 custom_fonts/font = SubResource( 1 )
 text = "3"
@@ -102,17 +102,17 @@ align = 1
 [node name="4" type="TextureButton" parent="."]
 margin_left = 517.0
 margin_top = 179.0
-margin_right = 704.0
-margin_bottom = 367.0
-rect_scale = Vector2( 0.27, 0.27 )
+margin_right = 646.0
+margin_bottom = 307.0
+rect_scale = Vector2( 0.4, 0.4 )
 texture_normal = ExtResource( 4 )
 texture_pressed = ExtResource( 5 )
 
 [node name="Label" type="Label" parent="4"]
-margin_left = 74.0741
-margin_top = 55.5555
-margin_right = 114.074
-margin_bottom = 130.556
+margin_left = 45.0
+margin_top = 17.5
+margin_right = 85.0
+margin_bottom = 92.5005
 custom_colors/font_color = Color( 0.556863, 0.529412, 0.529412, 1 )
 custom_fonts/font = SubResource( 1 )
 text = "4"
@@ -121,17 +121,17 @@ align = 1
 [node name="5" type="TextureButton" parent="."]
 margin_left = 572.0
 margin_top = 179.0
-margin_right = 759.0
-margin_bottom = 367.0
-rect_scale = Vector2( 0.27, 0.27 )
+margin_right = 701.0
+margin_bottom = 307.0
+rect_scale = Vector2( 0.4, 0.4 )
 texture_normal = ExtResource( 4 )
 texture_pressed = ExtResource( 5 )
 
 [node name="Label" type="Label" parent="5"]
-margin_left = 74.0741
-margin_top = 55.5555
-margin_right = 114.074
-margin_bottom = 130.556
+margin_left = 45.0
+margin_top = 17.5
+margin_right = 84.9999
+margin_bottom = 92.5005
 custom_colors/font_color = Color( 0.556863, 0.529412, 0.529412, 1 )
 custom_fonts/font = SubResource( 1 )
 text = "5"
@@ -140,17 +140,17 @@ align = 1
 [node name="6" type="TextureButton" parent="."]
 margin_left = 625.0
 margin_top = 179.0
-margin_right = 812.0
-margin_bottom = 367.0
-rect_scale = Vector2( 0.27, 0.27 )
+margin_right = 754.0
+margin_bottom = 307.0
+rect_scale = Vector2( 0.4, 0.4 )
 texture_normal = ExtResource( 4 )
 texture_pressed = ExtResource( 5 )
 
 [node name="Label" type="Label" parent="6"]
-margin_left = 74.0741
-margin_top = 55.5555
-margin_right = 114.074
-margin_bottom = 130.556
+margin_left = 45.0
+margin_top = 17.5
+margin_right = 84.9999
+margin_bottom = 92.5005
 custom_colors/font_color = Color( 0.556863, 0.529412, 0.529412, 1 )
 custom_fonts/font = SubResource( 1 )
 text = "6"
@@ -159,17 +159,17 @@ align = 1
 [node name="7" type="TextureButton" parent="."]
 margin_left = 517.0
 margin_top = 232.0
-margin_right = 704.0
-margin_bottom = 420.0
-rect_scale = Vector2( 0.27, 0.27 )
+margin_right = 646.0
+margin_bottom = 360.0
+rect_scale = Vector2( 0.4, 0.4 )
 texture_normal = ExtResource( 4 )
 texture_pressed = ExtResource( 5 )
 
 [node name="Label" type="Label" parent="7"]
-margin_left = 74.0741
-margin_top = 55.5555
-margin_right = 114.074
-margin_bottom = 130.556
+margin_left = 45.0
+margin_top = 17.5
+margin_right = 84.9999
+margin_bottom = 92.5005
 custom_colors/font_color = Color( 0.556863, 0.529412, 0.529412, 1 )
 custom_fonts/font = SubResource( 1 )
 text = "7"
@@ -178,17 +178,17 @@ align = 1
 [node name="8" type="TextureButton" parent="."]
 margin_left = 572.0
 margin_top = 232.0
-margin_right = 759.0
-margin_bottom = 420.0
-rect_scale = Vector2( 0.27, 0.27 )
+margin_right = 701.0
+margin_bottom = 360.0
+rect_scale = Vector2( 0.4, 0.4 )
 texture_normal = ExtResource( 4 )
 texture_pressed = ExtResource( 5 )
 
 [node name="Label" type="Label" parent="8"]
-margin_left = 74.0741
-margin_top = 55.5555
-margin_right = 114.074
-margin_bottom = 130.556
+margin_left = 45.0
+margin_top = 17.5
+margin_right = 84.9999
+margin_bottom = 92.5005
 custom_colors/font_color = Color( 0.556863, 0.529412, 0.529412, 1 )
 custom_fonts/font = SubResource( 1 )
 text = "8"
@@ -197,17 +197,17 @@ align = 1
 [node name="9" type="TextureButton" parent="."]
 margin_left = 625.0
 margin_top = 232.0
-margin_right = 812.0
-margin_bottom = 420.0
-rect_scale = Vector2( 0.27, 0.27 )
+margin_right = 754.0
+margin_bottom = 360.0
+rect_scale = Vector2( 0.4, 0.4 )
 texture_normal = ExtResource( 4 )
 texture_pressed = ExtResource( 5 )
 
 [node name="Label" type="Label" parent="9"]
-margin_left = 74.0741
-margin_top = 55.5555
-margin_right = 114.074
-margin_bottom = 208.556
+margin_left = 45.0
+margin_top = 17.5
+margin_right = 84.9999
+margin_bottom = 170.501
 custom_colors/font_color = Color( 0.556863, 0.529412, 0.529412, 1 )
 custom_fonts/font = SubResource( 1 )
 text = "9
