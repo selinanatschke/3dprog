@@ -7,10 +7,19 @@ export var min_speed = 10
 # Maximum speed of the mob in meters per second.
 export var max_speed = 18
 
+onready var layer4: TextureRect = get_node("/root/Main/CableRollLayer/4")
+onready var layer7: TextureRect = get_node("/root/Main/CableRollLayer/7")
+onready var layer6: TextureRect = get_node("/root/Main/CableRollLayer/6")
+onready var layer2: TextureRect = get_node("/root/Main/CableRollLayer/2")
+
+var layerArray = []
+
 var velocity = Vector3.ZERO
 
 func _ready():
 	add_to_group("mob")
+	# Initialize the layerArray after all onready variables are initialized
+	layerArray = [layer4, layer7, layer6, layer2]
 
 func _physics_process(_delta):
 	move_and_slide(velocity)
@@ -33,6 +42,17 @@ func _on_VisibilityNotifier_screen_exited():
 	queue_free()
 	
 func squash():
+	show_letter()
 	print("squash")
 	emit_signal("squashed")
 	queue_free()
+
+func show_letter():
+	if layer4.visible == false: 
+		layer4.visible = true
+	elif layer4.visible == true and layer7.visible == false:
+		layer7.visible = true
+	elif layer4.visible == true and layer7.visible == true and layer6.visible == false:
+		layer6.visible = true
+	else :
+		layer2.visible = true

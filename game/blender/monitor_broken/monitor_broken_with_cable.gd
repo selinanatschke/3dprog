@@ -1,7 +1,7 @@
 extends Spatial
 
 onready var monitor: Spatial = get_node("/root/Main/MainRoom/furniture/monitor_flat")
-onready var cableRollLayer: CanvasLayer = get_node("/root/Main/CableRollLayer")
+onready var cableRollLayer: TextureRect = get_node("/root/Main/CableRollLayer/cableRoll")
 
 func _on_Area_input_event(camera, event, position, normal, shape_idx):
 	if event is InputEventMouseButton:
