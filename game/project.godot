@@ -22,6 +22,7 @@ config/icon="res://icon.png"
 [autoload]
 
 DialogManager="*res://textbox/DialogManager.gd"
+GlobalVariables="*res://global_variables.gd"
 
 [display]
 

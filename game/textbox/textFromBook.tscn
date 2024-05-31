@@ -26,8 +26,7 @@ margin_right = 870.0
 margin_bottom = 475.0
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_fonts/font = SubResource( 1 )
-text = "Repariere die KI & finde dafür die Bauteile in der
-Bibliothek!"
+text = "Um die KI zu reparieren, brauchst du ein Werkzeug und ein neues Kabel, welches sich hinter verschlossenen Türen befindet!"
 align = 1
 
 [connection signal="pressed" from="TextureButton" to="." method="_on_TextureButton_pressed"]
