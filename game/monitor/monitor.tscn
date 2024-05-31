@@ -2,7 +2,7 @@
 
 [ext_resource path="res://monitor/Roboto-Regular.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://monitor/monitor.gd" type="Script" id=2]
-[ext_resource path="res://monitor/smartphone-1717163_640.png" type="Texture" id=3]
+[ext_resource path="res://monitor/monitor.jpg" type="Texture" id=3]
 
 [sub_resource type="DynamicFont" id=1]
 font_data = ExtResource( 1 )
@@ -11,11 +11,11 @@ font_data = ExtResource( 1 )
 script = ExtResource( 2 )
 
 [node name="TextureButton" type="TextureButton" parent="."]
-margin_left = 832.0
-margin_top = -15.0
-margin_right = 1472.0
-margin_bottom = 625.0
-rect_rotation = 90.0
+margin_left = 38.0
+margin_top = 98.0
+margin_right = 1928.0
+margin_bottom = 907.0
+rect_scale = Vector2( 0.5, 0.5 )
 texture_normal = ExtResource( 3 )
 
 [node name="Label" type="Label" parent="."]

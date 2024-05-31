@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/smartphone-1717163_640.png-b1565482aab17d5c0e044fb1e1922427.stex"
+path="res://.import/monitor.jpg-0b6d66f48f64ab9a4345acd1be63fe49.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://monitor/smartphone-1717163_640.png"
-dest_files=[ "res://.import/smartphone-1717163_640.png-b1565482aab17d5c0e044fb1e1922427.stex" ]
+source_file="res://monitor/monitor.jpg"
+dest_files=[ "res://.import/monitor.jpg-0b6d66f48f64ab9a4345acd1be63fe49.stex" ]
 
 [params]
 
