@@ -2,7 +2,7 @@ extends Spatial
 
 onready var schlossLayer: CanvasLayer = get_node("/root/Main/Schloss")
 onready var paperFromBookLayer: CanvasLayer = get_node("/root/Main/PaperFromBook")
-onready var keyLayer: TextureRect = get_node("/root/Main/CableRollLayer/key")
+onready var keyLayer: TextureRect = get_node("/root/Main/Inventory/key")
 
 func _on_Area_input_event(camera, event, position, normal, shape_idx):
 	if event is InputEventMouseButton:

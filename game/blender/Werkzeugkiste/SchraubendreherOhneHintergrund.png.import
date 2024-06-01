@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/7.png-0792e192fd97ccc7b164324193258022.stex"
+path="res://.import/SchraubendreherOhneHintergrund.png-7e2ad10792d93dd51860c9c011a3e071.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://flying_books/7.png"
-dest_files=[ "res://.import/7.png-0792e192fd97ccc7b164324193258022.stex" ]
+source_file="res://blender/Werkzeugkiste/SchraubendreherOhneHintergrund.png"
+dest_files=[ "res://.import/SchraubendreherOhneHintergrund.png-7e2ad10792d93dd51860c9c011a3e071.stex" ]
 
 [params]
 

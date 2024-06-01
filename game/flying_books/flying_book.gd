@@ -7,10 +7,10 @@ export var min_speed = 10
 # Maximum speed of the mob in meters per second.
 export var max_speed = 18
 
-onready var layer4: TextureRect = get_node("/root/Main/CableRollLayer/4")
-onready var layer7: TextureRect = get_node("/root/Main/CableRollLayer/7")
-onready var layer6: TextureRect = get_node("/root/Main/CableRollLayer/6")
-onready var layer2: TextureRect = get_node("/root/Main/CableRollLayer/2")
+onready var layer4: TextureRect = get_node("/root/Main/Inventory/4")
+onready var layer7: TextureRect = get_node("/root/Main/Inventory/7")
+onready var layer6: TextureRect = get_node("/root/Main/Inventory/6")
+onready var layer2: TextureRect = get_node("/root/Main/Inventory/2")
 
 var velocity = Vector3.ZERO
 

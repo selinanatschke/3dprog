@@ -1,16 +1,20 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://blender/cableroll/cableroll.png" type="Texture" id=1]
 [ext_resource path="res://textbox/Lugrasimo-Regular.ttf" type="DynamicFontData" id=2]
-[ext_resource path="res://flying_books/background.png" type="Texture" id=3]
 [ext_resource path="res://blender/key/key.png" type="Texture" id=4]
+[ext_resource path="res://blender/Werkzeugkiste/SchraubendreherOhneHintergrund.png" type="Texture" id=5]
+
+[sub_resource type="StreamTexture" id=2]
+flags = 4
+load_path = "res://.import/background.png-cf0db347ef698e3c00f754c922e83c6d.stex"
 
 [sub_resource type="DynamicFont" id=1]
 size = 55
 outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 2 )
 
-[node name="CableRollLayer" type="CanvasLayer"]
+[node name="Inventory" type="CanvasLayer"]
 
 [node name="cableRoll" type="TextureRect" parent="."]
 visible = false
@@ -37,7 +41,7 @@ margin_top = 10.0
 margin_right = 120.0
 margin_bottom = 109.0
 rect_scale = Vector2( 0.6, 0.6 )
-texture = ExtResource( 3 )
+texture = SubResource( 2 )
 
 [node name="Label" type="Label" parent="4"]
 margin_left = 36.6667
@@ -55,7 +59,7 @@ margin_top = 10.0
 margin_right = 199.0
 margin_bottom = 109.0
 rect_scale = Vector2( 0.6, 0.6 )
-texture = ExtResource( 3 )
+texture = SubResource( 2 )
 
 [node name="Label" type="Label" parent="7"]
 margin_left = 36.6667
@@ -73,7 +77,7 @@ margin_top = 10.0
 margin_right = 280.0
 margin_bottom = 109.0
 rect_scale = Vector2( 0.6, 0.6 )
-texture = ExtResource( 3 )
+texture = SubResource( 2 )
 
 [node name="Label" type="Label" parent="6"]
 margin_left = 36.6667
@@ -91,7 +95,7 @@ margin_top = 10.0
 margin_right = 363.0
 margin_bottom = 109.0
 rect_scale = Vector2( 0.6, 0.6 )
-texture = ExtResource( 3 )
+texture = SubResource( 2 )
 
 [node name="Label" type="Label" parent="2"]
 margin_left = 36.6667
@@ -101,3 +105,11 @@ margin_bottom = 80.0
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_fonts/font = SubResource( 1 )
 text = "2"
+
+[node name="Schraubenzieher" type="TextureRect" parent="."]
+visible = false
+margin_left = 785.0
+margin_right = 954.0
+margin_bottom = 356.0
+rect_scale = Vector2( 0.25, 0.25 )
+texture = ExtResource( 5 )

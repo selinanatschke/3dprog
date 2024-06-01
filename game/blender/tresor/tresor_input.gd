@@ -5,10 +5,10 @@ onready var tresor_open: Spatial = get_node("/root/Main/Room1/Tresor-offen")
 onready var tresor_closed: Spatial = get_node("/root/Main/Room1/Tresor")
 var code =[]
 
-onready var layer4: TextureRect = get_node("/root/Main/CableRollLayer/4")
-onready var layer7: TextureRect = get_node("/root/Main/CableRollLayer/7")
-onready var layer6: TextureRect = get_node("/root/Main/CableRollLayer/6")
-onready var layer2: TextureRect = get_node("/root/Main/CableRollLayer/2")
+onready var layer4: TextureRect = get_node("/root/Main/Inventory/4")
+onready var layer7: TextureRect = get_node("/root/Main/Inventory/7")
+onready var layer6: TextureRect = get_node("/root/Main/Inventory/6")
+onready var layer2: TextureRect = get_node("/root/Main/Inventory/2")
 
 func _on_TextureButton_pressed():
 	labels.text = ""

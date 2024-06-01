@@ -1,6 +1,6 @@
 extends Spatial
 
-onready var keyLayer: TextureRect = get_node("/root/Main/CableRollLayer/key")
+onready var keyLayer: TextureRect = get_node("/root/Main/Inventory/key")
 onready var key: Spatial = get_node("/root/Main/Room1/stool2/key")
 
 func _on_Area_input_event(camera, event, position, normal, shape_idx):
