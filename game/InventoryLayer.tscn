@@ -2,8 +2,8 @@
 
 [ext_resource path="res://blender/cableroll/cableroll.png" type="Texture" id=1]
 [ext_resource path="res://textbox/Lugrasimo-Regular.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://blender/Werkzeugkiste/Schraubi.png" type="Texture" id=3]
 [ext_resource path="res://blender/key/key.png" type="Texture" id=4]
-[ext_resource path="res://blender/Werkzeugkiste/SchraubendreherOhneHintergrund.png" type="Texture" id=5]
 
 [sub_resource type="StreamTexture" id=2]
 flags = 4
@@ -18,19 +18,19 @@ font_data = ExtResource( 2 )
 
 [node name="cableRoll" type="TextureRect" parent="."]
 visible = false
-margin_left = 945.0
-margin_top = 6.0
-margin_right = 1190.0
-margin_bottom = 267.0
-rect_scale = Vector2( 0.3, 0.3 )
+margin_left = 797.0
+margin_top = -42.0
+margin_right = 2717.0
+margin_bottom = 1038.0
+rect_scale = Vector2( 0.2, 0.2 )
 texture = ExtResource( 1 )
 
 [node name="key" type="TextureRect" parent="."]
 visible = false
-margin_left = 851.0
-margin_top = 13.0
-margin_right = 1144.0
-margin_bottom = 234.0
+margin_left = 837.0
+margin_top = 21.0
+margin_right = 1130.0
+margin_bottom = 242.0
 rect_scale = Vector2( 0.3, 0.3 )
 texture = ExtResource( 4 )
 
@@ -108,8 +108,9 @@ text = "2"
 
 [node name="Schraubenzieher" type="TextureRect" parent="."]
 visible = false
-margin_left = 785.0
-margin_right = 954.0
-margin_bottom = 356.0
+margin_left = 586.0
+margin_top = -67.0
+margin_right = 2506.0
+margin_bottom = 1013.0
 rect_scale = Vector2( 0.25, 0.25 )
-texture = ExtResource( 5 )
+texture = ExtResource( 3 )

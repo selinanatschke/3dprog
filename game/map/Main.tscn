@@ -1,4 +1,4 @@
-[gd_scene load_steps=60 format=2]
+[gd_scene load_steps=63 format=2]
 
 [ext_resource path="res://player/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://blender/basicWall/basicWall.tscn" type="PackedScene" id=2]
@@ -43,6 +43,9 @@
 [ext_resource path="res://textbox/textFromBook.tscn" type="PackedScene" id=41]
 [ext_resource path="res://blender/frame/frame_dark.tscn" type="PackedScene" id=42]
 [ext_resource path="res://blender/Werkzeugkiste/WerkzeugkisteSchraubenzieher.tscn" type="PackedScene" id=43]
+[ext_resource path="res://blender/bücherwurm/bücherwurmLayer.tscn" type="PackedScene" id=44]
+[ext_resource path="res://blender/bücherwurm/Buecherwurm.tscn" type="PackedScene" id=45]
+[ext_resource path="res://blender/bücherwurm/bücherwurmHinweisLayer.tscn" type="PackedScene" id=46]
 
 [sub_resource type="CubeMesh" id=2]
 size = Vector3( 30, 2, 60 )
@@ -103,6 +106,12 @@ flying_book_scene = ExtResource( 28 )
 
 [node name="Inventory" parent="." instance=ExtResource( 39 )]
 
+[node name="BücherwurmHinweisLayer" parent="." instance=ExtResource( 46 )]
+visible = false
+
+[node name="BücherwurmLayer" parent="." instance=ExtResource( 44 )]
+visible = false
+
 [node name="PaperFromBook" parent="." instance=ExtResource( 41 )]
 visible = false
 
@@ -125,7 +134,10 @@ shadow_enabled = true
 shadow_bias = -5.0
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 33.7922 )
+
+[node name="Buecherwurm" parent="." instance=ExtResource( 45 )]
+transform = Transform( -0.307208, 0, -0.515387, 0, 0.6, 0, 0.515387, 0, -0.307208, -4.634, 2, 33.428 )
 
 [node name="CameraPivot" type="Position3D" parent="."]
 
@@ -136,7 +148,6 @@ size = 60.0
 
 [node name="Ceiling" type="StaticBody" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 9.81383, 0 )
-visible = false
 
 [node name="MeshInstance" type="MeshInstance" parent="Ceiling"]
 mesh = SubResource( 2 )
@@ -208,7 +219,7 @@ material/0 = SubResource( 13 )
 transform = Transform( -5.24537e-07, 0, 3, 0, 1, 0, -12, 0, -1.31134e-07, -7, 1, 3.0598e-07 )
 
 [node name="Boden5" parent="MainRoom/Ground" instance=ExtResource( 17 )]
-transform = Transform( -5.24537e-07, 0, 3, 0, 1, 0, -12, 0, -1.31134e-07, 7, 1, -3.0598e-07 )
+transform = Transform( -5.24537e-07, 0, 2.9, 0, 1, 0, -12, 0, -1.26763e-07, 7.71489, 1, -3.0598e-07 )
 
 [node name="Wall" type="Spatial" parent="MainRoom"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.1, 0 )
@@ -417,8 +428,8 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1.5, 15, 0, -26 )
 [node name="basicWall4" parent="SpawnRoom/Wall" instance=ExtResource( 2 )]
 transform = Transform( 7.54979e-08, 0, 5.5, 0, 1, 0, -1, 0, 4.15238e-07, 0, 0, -22 )
 
-[node name="Bookshelf" type="Spatial" parent="SpawnRoom"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 0, 0 )
+[node name="StapelBraun4" parent="SpawnRoom" instance=ExtResource( 21 )]
+transform = Transform( 0.685818, 0, -0.727773, 0, 1, 0, 0.727773, 0, 0.685818, -5.1975, 0.0398464, -27.0561 )
 
 [node name="Room1" type="Spatial" parent="."]
 

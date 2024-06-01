@@ -5,8 +5,8 @@
 [ext_resource path="res://player/CameraFollow.gd" type="Script" id=3]
 
 [sub_resource type="CapsuleShape" id=1]
-radius = 0.756173
-height = 1.06549
+radius = 1.06273
+height = 0.786846
 
 [node name="Player" type="KinematicBody"]
 collision_mask = 6
@@ -29,5 +29,5 @@ height = 1.0
 transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 1, 0 )
 
 [node name="CollisionShape" type="CollisionShape" parent="."]
-transform = Transform( 1, 0, 0, 0, -0.0174524, 0.999848, 0, -0.999848, -0.0174524, 0.0432833, 0.289642, -0.142083 )
+transform = Transform( 1, 0, 0, 0, -0.0174524, 0.999848, 0, -0.999848, -0.0174524, 0.0432833, 0.289642, -0.406868 )
 shape = SubResource( 1 )

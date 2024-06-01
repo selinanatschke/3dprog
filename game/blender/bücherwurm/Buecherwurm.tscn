@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://blender/bücherwurm/Buecherwurm.glb" type="PackedScene" id=1]
+[ext_resource path="res://blender/bücherwurm/Buecherwurm.gd" type="Script" id=2]
+
+[sub_resource type="CapsuleShape" id=1]
+radius = 1.4261
+height = 4.33488
+
+[node name="Buecherwurm" instance=ExtResource( 1 )]
+script = ExtResource( 2 )
+
+[node name="Area" type="Area" parent="." index="2"]
+
+[node name="CollisionShape" type="CollisionShape" parent="Area" index="0"]
+transform = Transform( 1, 0, 0, 0, 0.781444, -0.623975, 0, 0.623975, 0.781444, -0.0540352, 2.50365, 1.09873 )
+shape = SubResource( 1 )
+
+[connection signal="input_event" from="Area" to="." method="_on_Area_input_event"]

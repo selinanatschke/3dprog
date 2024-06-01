@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/SchraubendreherOhneHintergrund.png-7e2ad10792d93dd51860c9c011a3e071.stex"
+path="res://.import/SprechblaseEckigMitWeiß.png-fe0c65e3d3e3ffda78f8f851d2f68523.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://blender/Werkzeugkiste/SchraubendreherOhneHintergrund.png"
-dest_files=[ "res://.import/SchraubendreherOhneHintergrund.png-7e2ad10792d93dd51860c9c011a3e071.stex" ]
+source_file="res://blender/bücherwurm/SprechblaseEckigMitWeiß.png"
+dest_files=[ "res://.import/SprechblaseEckigMitWeiß.png-fe0c65e3d3e3ffda78f8f851d2f68523.stex" ]
 
 [params]
 

@@ -11,6 +11,7 @@ onready var layer4: TextureRect = get_node("/root/Main/Inventory/4")
 onready var layer7: TextureRect = get_node("/root/Main/Inventory/7")
 onready var layer6: TextureRect = get_node("/root/Main/Inventory/6")
 onready var layer2: TextureRect = get_node("/root/Main/Inventory/2")
+onready var buecherwurmHinweisLayer: CanvasLayer = get_node("/root/Main/BücherwurmHinweisLayer")
 
 var velocity = Vector3.ZERO
 
@@ -53,3 +54,4 @@ func show_letter():
 		layer6.visible = true
 	else :
 		layer2.visible = true
+		buecherwurmHinweisLayer.visible = true
