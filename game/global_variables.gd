@@ -1,4 +1,4 @@
 extends Node
 
-var books_flying = true
+var books_flying = false
 var steps = 0

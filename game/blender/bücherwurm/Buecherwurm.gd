@@ -1,6 +1,7 @@
 extends Spatial
 
 onready var buecherwurmLayer: CanvasLayer = get_node("/root/Main/BücherwurmLayer")
+var is_scaled = false
 
 func _on_Area_input_event(camera, event, position, normal, shape_idx):
 	if event is InputEventMouseButton:
@@ -8,4 +9,3 @@ func _on_Area_input_event(camera, event, position, normal, shape_idx):
 			print("bücherwurm clicked")
 			GlobalVariables.steps = 0
 			buecherwurmLayer.visible = true
-
