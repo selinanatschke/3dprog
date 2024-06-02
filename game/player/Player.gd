@@ -99,3 +99,11 @@ func _physics_process(delta):
 				velocity.y = bounce_impulse
 			# Always squash the book, regardless of collision direction.
 			book.squash()
+
+
+func _on_RigidBody_body_entered(body):
+	pass # Replace with function body.
+
+
+func _on_collisionSound_finished():
+	pass # Replace with function body.

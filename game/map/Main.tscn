@@ -1,4 +1,4 @@
-[gd_scene load_steps=63 format=2]
+[gd_scene load_steps=64 format=2]
 
 [ext_resource path="res://player/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://blender/basicWall/basicWall.tscn" type="PackedScene" id=2]
@@ -46,6 +46,7 @@
 [ext_resource path="res://blender/bücherwurm/bücherwurmLayer.tscn" type="PackedScene" id=44]
 [ext_resource path="res://blender/bücherwurm/Buecherwurm.tscn" type="PackedScene" id=45]
 [ext_resource path="res://blender/bücherwurm/bücherwurmHinweisLayer.tscn" type="PackedScene" id=46]
+[ext_resource path="res://audio/background_music.mp3" type="AudioStream" id=47]
 
 [sub_resource type="CubeMesh" id=2]
 size = Vector3( 30, 2, 60 )
@@ -729,5 +730,10 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 24.248, 7.5, 19.281 )
 
 [node name="lampv6" parent="Lamps" instance=ExtResource( 37 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.247999, 7.5, 35.281 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 47 )
+volume_db = -29.538
+autoplay = true
 
 [connection signal="timeout" from="BookTimer" to="." method="_on_BookTimer_timeout"]

@@ -13,6 +13,8 @@ onready var layer6: TextureRect = get_node("/root/Main/Inventory/6")
 onready var layer2: TextureRect = get_node("/root/Main/Inventory/2")
 onready var buecherwurmHinweisLayer: CanvasLayer = get_node("/root/Main/BücherwurmHinweisLayer")
 
+onready var squashSound = $squash
+
 var velocity = Vector3.ZERO
 
 func _ready():
@@ -40,10 +42,14 @@ func _on_VisibilityNotifier_screen_exited():
 	queue_free()
 	
 func squash():
+	squashSound.play()
 	show_letter()
-	print("squash")
+	print("squash", squashSound)
+	if squashSound:
+		print("works")
 	emit_signal("squashed")
 	queue_free()
+
 
 func show_letter():
 	if layer4.visible == false: 

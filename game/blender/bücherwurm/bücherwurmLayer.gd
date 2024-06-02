@@ -17,6 +17,7 @@ func _on_Sprechblase_pressed():
 
 func _on_Close_pressed():
 	self.visible = false
+	addSpeechbubbleText("Ah gut dass du da bist hier geht alles drunter und drüber, kannst du gleich mal mitkommen und mir helfen")
 
 func _on_Gedankenblase_pressed():
 	if GlobalVariables.steps == 0:

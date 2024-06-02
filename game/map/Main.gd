@@ -5,6 +5,7 @@ export (PackedScene) var flying_book_scene
 
 func _ready():
 	randomize()
+
 onready var text: CanvasLayer = get_node("/root/Main/Paper")
 
 func _on_BookTimer_timeout():

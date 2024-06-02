@@ -28,5 +28,6 @@ custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_fonts/font = SubResource( 1 )
 text = "Um die KI zu reparieren, brauchst du ein Werkzeug und ein neues Kabel, welches sich hinter verschlossenen Türen befindet!"
 align = 1
+autowrap = true
 
 [connection signal="pressed" from="TextureButton" to="." method="_on_TextureButton_pressed"]

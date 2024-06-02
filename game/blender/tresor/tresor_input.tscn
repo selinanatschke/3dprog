@@ -35,10 +35,10 @@ custom_fonts/font = SubResource( 2 )
 align = 1
 
 [node name="TextureButton" type="TextureButton" parent="."]
-margin_left = 956.0
-margin_top = 31.0
-margin_right = 1001.0
-margin_bottom = 78.0
+margin_left = 792.0
+margin_top = 501.0
+margin_right = 837.0
+margin_bottom = 548.0
 texture_normal = ExtResource( 3 )
 
 [node name="1" type="TextureButton" parent="."]

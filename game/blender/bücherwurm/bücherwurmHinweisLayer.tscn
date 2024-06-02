@@ -52,3 +52,4 @@ margin_bottom = 301.0
 texture_normal = ExtResource( 5 )
 
 [connection signal="pressed" from="Sprechblase" to="." method="_on_Sprechblase_pressed"]
+[connection signal="pressed" from="Close" to="." method="_on_Close_pressed"]
