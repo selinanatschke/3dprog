@@ -10,7 +10,7 @@ height = 4.33488
 [node name="Buecherwurm" instance=ExtResource( 1 )]
 script = ExtResource( 2 )
 
-[node name="Area" type="Area" parent="." index="2"]
+[node name="Area" type="Area" parent="." index="2" groups=["collision"]]
 
 [node name="CollisionShape" type="CollisionShape" parent="Area" index="0"]
 transform = Transform( 1, 0, 0, 0, 0.781444, -0.623975, 0, 0.623975, 0.781444, -0.0540352, 2.50365, 1.09873 )

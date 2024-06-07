@@ -9,7 +9,7 @@ extents = Vector3( 1.26189, 1.32871, 1.35207 )
 [node name="cableroll" instance=ExtResource( 1 )]
 script = ExtResource( 2 )
 
-[node name="Area" type="Area" parent="." index="2"]
+[node name="Area" type="Area" parent="." index="2" groups=["collision"]]
 
 [node name="CollisionShape" type="CollisionShape" parent="Area" index="0"]
 shape = SubResource( 1 )

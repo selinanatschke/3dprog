@@ -7,7 +7,7 @@ extents = Vector3( 0.566651, 0.183908, 1.44535 )
 
 [node name="buch" instance=ExtResource( 1 )]
 
-[node name="StaticBody" type="StaticBody" parent="." index="1"]
+[node name="StaticBody" type="StaticBody" parent="." index="1" groups=["collision"]]
 
 [node name="CollisionShape" type="CollisionShape" parent="StaticBody" index="0"]
 transform = Transform( 2, 0, 0, 0, 1, 0, 0, 0, 1, -0.0518119, 0.215184, 0 )

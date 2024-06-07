@@ -120,7 +120,7 @@ transform = Transform( -8.74228e-09, -0.2, 0, 0.2, -8.74228e-09, 0, 0, 0, 0.2, -
 visible = false
 mesh = SubResource( 4 )
 
-[node name="StaticBody" type="StaticBody" parent="." index="5"]
+[node name="StaticBody" type="StaticBody" parent="." index="5" groups=["collision"]]
 
 [node name="CollisionShape" type="CollisionShape" parent="StaticBody" index="0"]
 transform = Transform( 0.2, 0, 0, 0, 3, 0, 0, 0, 1.5, 0, -0.988673, 0 )

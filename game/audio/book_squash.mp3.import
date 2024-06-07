@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/book_squash.mp3-8a6f07139523d7847540018365a3c6ca.mp3str"
+
+[deps]
+
+source_file="res://audio/book_squash.mp3"
+dest_files=[ "res://.import/book_squash.mp3-8a6f07139523d7847540018365a3c6ca.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

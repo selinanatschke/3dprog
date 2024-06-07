@@ -12,4 +12,3 @@ func _on_Area_input_event(camera, event, position, normal, shape_idx):
 			self.visible = false
 			cableRollLayer.visible = false
 			schraubenzieherLayer.visible = false
-			

@@ -7,7 +7,7 @@ extents = Vector3( 0.603671, 1.04918, 1.40388 )
 
 [node name="StapelRosa" instance=ExtResource( 1 )]
 
-[node name="StaticBody" type="StaticBody" parent="." index="1"]
+[node name="StaticBody" type="StaticBody" parent="." index="1" groups=["collision"]]
 
 [node name="CollisionShape" type="CollisionShape" parent="StaticBody" index="0"]
 transform = Transform( 2, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.12559, 0 )

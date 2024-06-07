@@ -9,7 +9,7 @@ extents = Vector3( 1.19444, 0.335571, 1.4643 )
 [node name="altesbuch" instance=ExtResource( 1 )]
 script = ExtResource( 2 )
 
-[node name="Area" type="Area" parent="." index="3"]
+[node name="Area" type="Area" parent="." index="3" groups=["collision"]]
 
 [node name="CollisionShape" type="CollisionShape" parent="Area" index="0"]
 transform = Transform( 1, 0, 0, 0, 1.1, 0, 0, 0, 1, -0.064374, 0.337902, 0 )
