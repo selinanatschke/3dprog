@@ -1,4 +1,4 @@
-[gd_scene load_steps=65 format=2]
+[gd_scene load_steps=68 format=2]
 
 [ext_resource path="res://player/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://blender/basicWall/basicWall.tscn" type="PackedScene" id=2]
@@ -48,6 +48,7 @@
 [ext_resource path="res://blender/bücherwurm/bücherwurmHinweisLayer.tscn" type="PackedScene" id=46]
 [ext_resource path="res://audio/background_music.mp3" type="AudioStream" id=47]
 [ext_resource path="res://UI/StartScreen.tscn" type="PackedScene" id=48]
+[ext_resource path="res://PNG (Transparent)/star_01.png" type="Texture" id=49]
 
 [sub_resource type="CubeMesh" id=2]
 size = Vector3( 30, 2, 60 )
@@ -85,6 +86,19 @@ extents = Vector3( 6, 1, 15 )
 
 [sub_resource type="BoxShape" id=11]
 extents = Vector3( 10, 1, 10 )
+
+[sub_resource type="SpatialMaterial" id=17]
+flags_transparent = true
+flags_unshaded = true
+vertex_color_use_as_albedo = true
+params_blend_mode = 1
+params_billboard_mode = 3
+particles_anim_h_frames = 1
+particles_anim_v_frames = 1
+particles_anim_loop = false
+albedo_texture = ExtResource( 49 )
+
+[sub_resource type="QuadMesh" id=18]
 
 [sub_resource type="CubeMesh" id=8]
 material = SubResource( 13 )
@@ -358,6 +372,18 @@ visible = false
 
 [node name="MonitorBroken" parent="MainRoom/furniture" instance=ExtResource( 18 )]
 transform = Transform( -2, 0, 1.74846e-07, 0, 2, 0, -1.74846e-07, 0, -2, 14.107, 3, -13.148 )
+
+[node name="CPUParticles" type="CPUParticles" parent="MainRoom/furniture/MonitorBroken"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0741291, 0 )
+material_override = SubResource( 17 )
+amount = 5
+lifetime = 0.2
+mesh = SubResource( 18 )
+gravity = Vector3( 0, 0, 0 )
+initial_velocity = 0.5
+angle = 360.0
+angle_random = 1.0
+color = Color( 0.933333, 0.894118, 0.470588, 1 )
 
 [node name="Rabe" parent="MainRoom/furniture" instance=ExtResource( 20 )]
 transform = Transform( 0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 10.1901, 7.71606, 29.8782 )
