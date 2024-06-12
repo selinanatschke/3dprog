@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/einsammeln.mp3-5316c117ed817f1325efbb310745ca9d.mp3str"
+
+[deps]
+
+source_file="res://audio/einsammeln.mp3"
+dest_files=[ "res://.import/einsammeln.mp3-5316c117ed817f1325efbb310745ca9d.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

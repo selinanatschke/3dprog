@@ -1,8 +1,10 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://textbox/Lugrasimo-Regular.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://textbox/parchment_alpha.png" type="Texture" id=2]
 [ext_resource path="res://textbox/text.gd" type="Script" id=3]
+[ext_resource path="res://UI/Cross.png" type="Texture" id=4]
+[ext_resource path="res://audio/tastenklick.mp3" type="AudioStream" id=5]
 
 [sub_resource type="DynamicFont" id=1]
 size = 27
@@ -36,4 +38,20 @@ text = "In der Welt der Rätsel, ein mystisches Land,
 	wird die Türe weichen."
 align = 1
 
+[node name="Close" type="TextureButton" parent="."]
+anchor_left = 0.957
+anchor_top = 0.165
+anchor_right = 0.988
+anchor_bottom = 0.219
+margin_left = 0.0319214
+margin_top = -1.52588e-05
+margin_right = 611.288
+margin_bottom = 614.6
+rect_scale = Vector2( 0.05, 0.05 )
+texture_normal = ExtResource( 4 )
+
+[node name="pressKeySound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 5 )
+
 [connection signal="pressed" from="TextureButton" to="." method="_on_TextureButton_pressed"]
+[connection signal="pressed" from="Close" to="." method="_on_Close_pressed"]

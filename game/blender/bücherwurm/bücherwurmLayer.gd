@@ -5,6 +5,7 @@ onready var gedankenblaseLabel: Label = get_node("/root/Main/BücherwurmLayer/Ge
 onready var sprechblase: TextureButton = get_node("/root/Main/BücherwurmLayer/Sprechblase")
 onready var gedankenblase: TextureButton = get_node("/root/Main/BücherwurmLayer/Gedankenblase")
 onready var buecherwurm: TextureRect = get_node("/root/Main/BücherwurmLayer/Bücherwurm")
+onready var close: TextureButton = get_node("/root/Main/BücherwurmLayer/Close")
 
 func _on_Sprechblase_pressed():
 	if GlobalVariables.steps == 0:
@@ -14,9 +15,11 @@ func _on_Sprechblase_pressed():
 		
 	if GlobalVariables.steps == 1:
 		addSpeechbubbleText(" ... kannst du das bitte machen?, und damit dann das Buch auf dem Tisch öffnen. Das ist nämlich die Anleitung um die Ki zu reparieren.")
+		close.visible = true
 
 func _on_Close_pressed():
 	self.visible = false
+	$"pressKeySound".play()
 	addSpeechbubbleText("Ah gut dass du da bist hier geht alles drunter und drüber, kannst du gleich mal mitkommen und mir helfen")
 
 func _on_Gedankenblase_pressed():

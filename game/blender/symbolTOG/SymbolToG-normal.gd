@@ -16,10 +16,12 @@ func _on_Area_input_event(camera, event, position, normal, shape_idx):
 			object_to_hide.visible = true
 			door_object.visible = false
 			door_object_glowing.visible = true
+			$"activateSymbolSound".play()
 			
 			if door_object_glowing.visible and door_object_glowing2.visible and door_object_glowing3.visible:
 				door.translation = Vector3(16.604, 4.309, 20.711)
 				door.rotation_degrees = Vector3(0, 80, 0)
 				GlobalVariables.books_flying = true
+				$"openDoorSound".play()
 
 			

@@ -9,4 +9,4 @@ func _on_Area_input_event(camera, event, position, normal, shape_idx):
 			print("pick up key")
 			key.visible = false
 			keyLayer.visible = true
-			
+			$"pickUpSound".play()

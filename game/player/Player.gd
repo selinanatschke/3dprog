@@ -101,8 +101,7 @@ func _physics_process(delta):
 			book.squash()
 			$"bookSquashSound".play()
 			
-		print(collision.collider.is_in_group("collision"))	
 		if collision.collider.is_in_group("collision"):
 			print("collide")
-			$"collisionSound".play()
+			#$"collisionSound".play()
 

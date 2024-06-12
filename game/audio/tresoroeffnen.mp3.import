@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/tresoroeffnen.mp3-5c43d477d4009eb9d9886a79ce57920d.mp3str"
+
+[deps]
+
+source_file="res://audio/tresoroeffnen.mp3"
+dest_files=[ "res://.import/tresoroeffnen.mp3-5c43d477d4009eb9d9886a79ce57920d.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

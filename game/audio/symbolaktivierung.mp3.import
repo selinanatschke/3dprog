@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/symbolaktivierung.mp3-bd992bb6714fd498cdb283e77a7b8c85.mp3str"
+
+[deps]
+
+source_file="res://audio/symbolaktivierung.mp3"
+dest_files=[ "res://.import/symbolaktivierung.mp3-bd992bb6714fd498cdb283e77a7b8c85.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

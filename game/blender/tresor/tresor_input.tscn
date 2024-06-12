@@ -1,11 +1,13 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://blender/tresor/numpad.png" type="Texture" id=1]
 [ext_resource path="res://blender/tresor/tresor_input.gd" type="Script" id=2]
-[ext_resource path="res://blender/tresor/close.png" type="Texture" id=3]
+[ext_resource path="res://UI/Cross.png" type="Texture" id=3]
 [ext_resource path="res://blender/tresor/button1.png" type="Texture" id=4]
 [ext_resource path="res://blender/tresor/button2.png" type="Texture" id=5]
 [ext_resource path="res://fonts/Montserrat-Medium.ttf" type="DynamicFontData" id=6]
+[ext_resource path="res://audio/tresoroeffnen.mp3" type="AudioStream" id=7]
+[ext_resource path="res://audio/tastenklick.mp3" type="AudioStream" id=8]
 
 [sub_resource type="DynamicFont" id=2]
 extra_spacing_char = 15
@@ -39,6 +41,7 @@ margin_left = 792.0
 margin_top = 501.0
 margin_right = 837.0
 margin_bottom = 548.0
+rect_scale = Vector2( 0.05, 0.05 )
 texture_normal = ExtResource( 3 )
 
 [node name="1" type="TextureButton" parent="."]
@@ -213,6 +216,12 @@ custom_fonts/font = SubResource( 1 )
 text = "9
 "
 align = 1
+
+[node name="tresorOpenSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 7 )
+
+[node name="pressKeySound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 8 )
 
 [connection signal="pressed" from="TextureButton" to="." method="_on_TextureButton_pressed"]
 [connection signal="pressed" from="1" to="." method="_on_1_pressed"]

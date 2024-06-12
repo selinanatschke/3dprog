@@ -42,11 +42,9 @@ func _on_VisibilityNotifier_screen_exited():
 	queue_free()
 	
 func squash():
-	squashSound.play()
+	print("squash sound")
+	$"squash".play()
 	show_letter()
-	print("squash", squashSound)
-	if squashSound:
-		print("works")
 	emit_signal("squashed")
 	queue_free()
 
@@ -54,10 +52,17 @@ func squash():
 func show_letter():
 	if layer4.visible == false: 
 		layer4.visible = true
+		print("collect code sound")
+		$"collectCode".play()
 	elif layer4.visible == true and layer7.visible == false:
 		layer7.visible = true
+		$"collectCode".play()
 	elif layer4.visible == true and layer7.visible == true and layer6.visible == false:
 		layer6.visible = true
+		$"collectCode".play()
 	else :
-		layer2.visible = true
-		buecherwurmHinweisLayer.visible = true
+		if  !GlobalVariables.collectedCode:
+			layer2.visible = true
+			$"collectCode".play()
+			buecherwurmHinweisLayer.visible = true
+			GlobalVariables.collectedCode = true

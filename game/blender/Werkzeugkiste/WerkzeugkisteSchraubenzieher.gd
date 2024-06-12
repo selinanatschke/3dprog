@@ -10,3 +10,4 @@ func _on_Area_input_event(camera, event, position, normal, shape_idx):
 			self.visible = false
 			werkzeugkiste_leer.visible = true
 			schraubenzieherLayer.visible = true
+			$"pickUpSound".play()
