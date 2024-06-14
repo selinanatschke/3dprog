@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/player_collides.mp3-0445fbefe04844ebf3ecf4dc1a86e041.mp3str"
+
+[deps]
+
+source_file="res://audio/player_collides.mp3"
+dest_files=[ "res://.import/player_collides.mp3-0445fbefe04844ebf3ecf4dc1a86e041.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
