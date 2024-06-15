@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://textbox/Lugrasimo-Regular.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://blender/bücherwurm/SprechblaseEckigMitWeiß.png" type="Texture" id=2]
@@ -8,6 +8,7 @@
 [ext_resource path="res://blender/bücherwurm/Gedankenblase.png" type="Texture" id=6]
 [ext_resource path="res://audio/tastenklick.mp3" type="AudioStream" id=7]
 [ext_resource path="res://UI/Roboto-Regular.ttf" type="DynamicFontData" id=8]
+[ext_resource path="res://audio/SprechblaseOeffnen.mp3" type="AudioStream" id=9]
 
 [sub_resource type="DynamicFont" id=1]
 size = 55
@@ -48,7 +49,9 @@ margin_right = 1419.06
 margin_bottom = 744.445
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_fonts/font = SubResource( 1 )
-text = "Ah gut dass du da bist hier geht alles drunter und drüber, kannst du gleich mal mitkommen und mir helfen"
+text = "Ah gut, dass du da bist. Hier geht alles drunter und drüber! 
+Kannst du gleich mal mitkommen und mir helfen? 
+"
 autowrap = true
 
 [node name="Close" type="TextureButton" parent="."]
@@ -85,6 +88,9 @@ autowrap = true
 
 [node name="pressKeySound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 7 )
+
+[node name="bubbleSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 9 )
 
 [connection signal="pressed" from="Sprechblase" to="." method="_on_Sprechblase_pressed"]
 [connection signal="pressed" from="Close" to="." method="_on_Close_pressed"]

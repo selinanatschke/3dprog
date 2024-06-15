@@ -8,3 +8,4 @@ func _on_Area_input_event(camera, event, position, normal, shape_idx):
 			print("monitor pressed")
 
 			monitorLayer.visible = true
+			$"openSound".play()

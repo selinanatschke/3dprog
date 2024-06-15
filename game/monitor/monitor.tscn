@@ -29,11 +29,11 @@ custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_fonts/font = SubResource( 1 )
 text = "Systeme online. Diagnose abgeschlossen. Alle Funktionen sind nun wiederhergestellt. 
 
-Hallo Sparki . Ich bin die KI J.A.R.V.I.S, Ihr persönlicher Assistent. Meine Protokolle zeigen, dass Sie Ihr Gedächtnis verloren haben. Ich bin hier, um Ihnen zu helfen, es wiederzuerlangen.
+Hallo Sparki. Ich bin die KI J.A.R.V.I.S, Ihr persönlicher Assistent. Meine Protokolle zeigen, dass Sie Ihr Gedächtnis verloren haben. Ich bin hier, um Ihnen zu helfen, es wiederzuerlangen.
 
 Unsere erste Aufgabe wird es sein, die wichtigsten Erinnerungen und Daten zu rekonstruieren. Bitte entspannen Sie sich und folgen Sie meinen Anweisungen. Gemeinsam werden wir Ihre Vergangenheit entschlüsseln und Ihnen helfen, zu erfahren, wer Sie wirklich sind.
 
-Bereit, wenn Sie es sind. Lassen Sie uns beginnen"
+Bereit, wenn Sie es sind. Lassen Sie uns beginnen."
 align = 1
 autowrap = true
 

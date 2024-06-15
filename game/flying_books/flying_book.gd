@@ -12,6 +12,7 @@ onready var layer7: TextureRect = get_node("/root/Main/Inventory/7")
 onready var layer6: TextureRect = get_node("/root/Main/Inventory/6")
 onready var layer2: TextureRect = get_node("/root/Main/Inventory/2")
 onready var buecherwurmHinweisLayer: CanvasLayer = get_node("/root/Main/BücherwurmHinweisLayer")
+onready var bookWormSound: AudioStreamPlayer = get_node("/root/Main/Buecherwurm/bookWormSound")
 
 onready var squashSound = $squash
 
@@ -42,8 +43,6 @@ func _on_VisibilityNotifier_screen_exited():
 	queue_free()
 	
 func squash():
-	print("squash sound")
-	$"squash".play()
 	show_letter()
 	emit_signal("squashed")
 	queue_free()
@@ -52,17 +51,17 @@ func squash():
 func show_letter():
 	if layer4.visible == false: 
 		layer4.visible = true
-		print("collect code sound")
-		$"collectCode".play()
+		$"squash".play()
 	elif layer4.visible == true and layer7.visible == false:
 		layer7.visible = true
-		$"collectCode".play()
+		$"squash".play()
 	elif layer4.visible == true and layer7.visible == true and layer6.visible == false:
 		layer6.visible = true
-		$"collectCode".play()
+		$"squash".play()
 	else :
 		if  !GlobalVariables.collectedCode:
 			layer2.visible = true
-			$"collectCode".play()
+			$"squash".play()
+			bookWormSound.play()
 			buecherwurmHinweisLayer.visible = true
 			GlobalVariables.collectedCode = true

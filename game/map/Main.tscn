@@ -152,7 +152,7 @@ shadow_enabled = true
 shadow_bias = -5.0
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 33.7922 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0184784, 0, 35.0115 )
 
 [node name="Buecherwurm" parent="." instance=ExtResource( 45 )]
 transform = Transform( -0.307208, 0, -0.515387, 0, 0.6, 0, 0.515387, 0, -0.307208, -4.634, 2, 33.428 )
