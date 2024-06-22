@@ -1,4 +1,4 @@
-[gd_scene load_steps=69 format=2]
+[gd_scene load_steps=70 format=2]
 
 [ext_resource path="res://player/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://blender/basicWall/basicWall.tscn" type="PackedScene" id=2]
@@ -50,6 +50,7 @@
 [ext_resource path="res://UI/StartScreen.tscn" type="PackedScene" id=48]
 [ext_resource path="res://PNG (Transparent)/star_01.png" type="Texture" id=49]
 [ext_resource path="res://map/SpotLightFlicker.gd" type="Script" id=50]
+[ext_resource path="res://map/Main.tres" type="Environment" id=51]
 
 [sub_resource type="CubeMesh" id=2]
 size = Vector3( 30, 2, 60 )
@@ -753,8 +754,8 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 7.84038, 23.3199 )
 transform = Transform( 1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0.163915, 0 )
 light_energy = 4.0
 light_specular = 6.0
-spot_range = 18.7065
-spot_angle = 64.844
+spot_range = 20.0
+spot_angle = 80.0
 script = ExtResource( 50 )
 min_intensity = 1.0
 max_intensity = 4.0
@@ -767,12 +768,12 @@ omni_range = 0.785615
 [node name="deckenlampe3" parent="Lamps" instance=ExtResource( 36 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 7.96985, -20.8708 )
 
-[node name="SpotLight" type="SpotLight" parent="Lamps/deckenlampe3"]
+[node name="SpotLight2" type="SpotLight" parent="Lamps/deckenlampe3"]
 transform = Transform( 1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0.163915, 0 )
 light_energy = 4.0
 light_specular = 6.0
-spot_range = 18.7065
-spot_angle = 64.844
+spot_range = 20.0
+spot_angle = 80.0
 script = ExtResource( 50 )
 min_intensity = 1.0
 max_intensity = 4.0
@@ -819,7 +820,7 @@ light_energy = 6.565
 omni_range = 0.785615
 
 [node name="deckenlampe6" parent="Lamps" instance=ExtResource( 36 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 7.85375, 11.6596 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 7.85375, 6.9894 )
 
 [node name="SpotLight" type="SpotLight" parent="Lamps/deckenlampe6"]
 transform = Transform( 1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0.163915, 0 )
@@ -837,7 +838,7 @@ light_energy = 6.565
 omni_range = 0.785615
 
 [node name="deckenlampe7" parent="Lamps" instance=ExtResource( 36 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 7.8689, 11.6596 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 7.8689, 6.9894 )
 
 [node name="SpotLight" type="SpotLight" parent="Lamps/deckenlampe7"]
 transform = Transform( 1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0.163915, 0 )
@@ -870,5 +871,8 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.247999, 7.5, 35.281 )
 stream = ExtResource( 47 )
 volume_db = -29.538
 autoplay = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = ExtResource( 51 )
 
 [connection signal="timeout" from="BookTimer" to="." method="_on_BookTimer_timeout"]

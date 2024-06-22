@@ -1,0 +1,21 @@
+[gd_resource type="Environment" format=2]
+
+[resource]
+background_mode = 3
+fog_enabled = true
+fog_color = Color( 0.137255, 0.141176, 0.152941, 1 )
+fog_sun_color = Color( 0.247059, 0.223529, 0.172549, 1 )
+fog_depth_end = 50.0
+fog_depth_curve = 1.45433
+fog_transmit_curve = 0.840891
+fog_height_min = 1.7
+fog_height_max = -288.3
+fog_height_curve = 2.21914
+dof_blur_far_enabled = true
+dof_blur_far_amount = 0.05
+dof_blur_near_enabled = true
+glow_enabled = true
+glow_strength = 1.1
+glow_bloom = 0.2
+adjustment_enabled = true
+adjustment_saturation = 1.3
