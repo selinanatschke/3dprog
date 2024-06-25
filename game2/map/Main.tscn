@@ -588,7 +588,7 @@ transform = Transform( -0.600661, 0, 0.5284, 0, 0.8, 0, -0.5284, 0, -0.600661, -
 visible = false
 
 [node name="WerkzeugkisteSchraubenzieher" parent="Room2" instance=ExtResource( 43 )]
-transform = Transform( -0.600661, 0, 0.5284, 0, 0.8, 0, -0.5284, 0, -0.600661, -24.506, 1, 14.45 )
+transform = Transform( -0.600661, 0, 0.5284, 0, 0.8, 0, -0.5284, 0, -0.600661, -24.506, 0.809567, 14.45 )
 
 [node name="Room3" type="Spatial" parent="."]
 
