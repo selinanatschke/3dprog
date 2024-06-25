@@ -353,6 +353,7 @@ transform = Transform( 1, 2.9642e-08, -3.08726e-09, 0, 0.103591, 0.99462, 2.9802
 light_energy = 4.376
 light_indirect_energy = 4.817
 light_specular = 5.931
+shadow_enabled = true
 spot_range = 2.418
 
 [node name="bankerLamp2" parent="MainRoom/furniture" instance=ExtResource( 3 )]
@@ -363,6 +364,7 @@ transform = Transform( 1, 2.98023e-08, -3.72529e-09, 0, 0.103591, 0.99462, 2.980
 light_energy = 4.376
 light_indirect_energy = 4.817
 light_specular = 5.931
+shadow_enabled = true
 spot_range = 2.418
 
 [node name="monitor" parent="MainRoom/furniture" instance=ExtResource( 12 )]
@@ -479,6 +481,7 @@ transform = Transform( 1, 2.98023e-08, -3.72529e-09, 0, 0.103591, 0.99462, 2.980
 light_energy = 4.376
 light_indirect_energy = 4.817
 light_specular = 5.931
+shadow_enabled = true
 spot_range = 2.418
 
 [node name="Ground" type="StaticBody" parent="Room1"]
