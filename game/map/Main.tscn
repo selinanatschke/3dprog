@@ -236,10 +236,10 @@ mesh = SubResource( 2 )
 material/0 = SubResource( 13 )
 
 [node name="Boden3" parent="MainRoom/Ground" instance=ExtResource( 17 )]
-transform = Transform( -5.24537e-07, 0, 3, 0, 1, 0, -12, 0, -1.31134e-07, -7, 1, 3.0598e-07 )
+transform = Transform( -5.24537e-07, 0, 3, 0, 1, 0, -12, 0, -1.31134e-07, -7, 0.999, 0 )
 
 [node name="Boden5" parent="MainRoom/Ground" instance=ExtResource( 17 )]
-transform = Transform( -5.24537e-07, 0, 2.9, 0, 1, 0, -12, 0, -1.26763e-07, 7.71489, 1, -3.0598e-07 )
+transform = Transform( -5.24537e-07, 0, 2.9, 0, 1, 0, -12, 0, -1.26763e-07, 7.715, 0.99, 0 )
 
 [node name="Wall" type="Spatial" parent="MainRoom"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.1, 0 )
@@ -423,7 +423,7 @@ transform = Transform( -0.0897621, 0.575153, -0.145404, -0.00808347, 0.145859, 0
 transform = Transform( 0.3, 0, 0, 0, 1, 0, 0, 0, 1, 14.934, 4.30909, 21.9968 )
 
 [node name="doorframe" parent="MainRoom/Doorway" instance=ExtResource( 11 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 4.4, 22 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 15.1, 4.4, 22 )
 
 [node name="papersheet" parent="MainRoom" instance=ExtResource( 25 )]
 transform = Transform( 0.926141, 0, 0.377178, 0, 1, 0, -0.377178, 0, 0.926141, 13.8185, 0.109478, 23.7709 )
@@ -736,6 +736,8 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 7.81979, 1.65956 )
 transform = Transform( 1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0.163915, 0 )
 light_energy = 4.0
 light_specular = 6.0
+shadow_bias = -0.01
+shadow_reverse_cull_face = true
 spot_range = 18.7065
 spot_angle = 64.844
 script = ExtResource( 50 )
@@ -754,6 +756,8 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 7.84038, 23.3199 )
 transform = Transform( 1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0.163915, 0 )
 light_energy = 4.0
 light_specular = 6.0
+shadow_bias = -0.01
+shadow_reverse_cull_face = true
 spot_range = 20.0
 spot_angle = 80.0
 script = ExtResource( 50 )
@@ -772,6 +776,8 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 7.96985, -20.8708 )
 transform = Transform( 1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0.163915, 0 )
 light_energy = 4.0
 light_specular = 6.0
+shadow_bias = -0.01
+shadow_reverse_cull_face = true
 spot_range = 20.0
 spot_angle = 80.0
 script = ExtResource( 50 )
@@ -790,6 +796,8 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 7.78128, -8.34044 )
 transform = Transform( 1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0.163915, 0 )
 light_energy = 4.0
 light_specular = 6.0
+shadow_bias = -0.01
+shadow_reverse_cull_face = true
 spot_range = 18.7065
 spot_angle = 64.844
 script = ExtResource( 50 )
@@ -808,6 +816,8 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 7.84007, -8.34044 )
 transform = Transform( 1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0.163915, 0 )
 light_energy = 4.0
 light_specular = 6.0
+shadow_bias = -0.01
+shadow_reverse_cull_face = true
 spot_range = 18.7065
 spot_angle = 64.844
 script = ExtResource( 50 )
@@ -826,6 +836,8 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 7.85375, 6.9894 )
 transform = Transform( 1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0.163915, 0 )
 light_energy = 4.0
 light_specular = 6.0
+shadow_bias = -0.01
+shadow_reverse_cull_face = true
 spot_range = 18.7065
 spot_angle = 64.844
 script = ExtResource( 50 )
@@ -844,6 +856,8 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 7.8689, 6.9894 )
 transform = Transform( 1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0.163915, 0 )
 light_energy = 4.0
 light_specular = 6.0
+shadow_bias = -0.01
+shadow_reverse_cull_face = true
 spot_range = 18.7065
 spot_angle = 64.844
 script = ExtResource( 50 )
