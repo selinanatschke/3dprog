@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Ratte.gd" type="Script" id=1]
 [ext_resource path="res://blender/rat/Material_001.material" type="Material" id=2]
@@ -44,9 +44,6 @@ surfaces/2 = {
 "vertex_count": 28
 }
 
-[sub_resource type="BoxShape" id=2]
-extents = Vector3( 0.433054, 0.341087, 1 )
-
 [node name="Ratte" type="KinematicBody"]
 transform = Transform( 0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0, 0 )
 script = ExtResource( 1 )
@@ -54,10 +51,6 @@ script = ExtResource( 1 )
 [node name="Rat1" type="MeshInstance" parent="."]
 transform = Transform( 1, 0, 0, 0, -3.57628e-07, -1, 0, 1, -3.57628e-07, 1.15484, -0.110785, -0.295802 )
 mesh = SubResource( 1 )
-
-[node name="CollisionShape" type="CollisionShape" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.14663, 0, -1.74114 )
-shape = SubResource( 2 )
 
 [node name="VisibilityNotifier" type="VisibilityNotifier" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.07915, 0, -1.47836 )
