@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/collectCode.mp3-d2f7bb0dd392447eeea8026c1079f958.mp3str"
+
+[deps]
+
+source_file="res://audio/collectCode.mp3"
+dest_files=[ "res://.import/collectCode.mp3-d2f7bb0dd392447eeea8026c1079f958.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

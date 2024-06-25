@@ -1,0 +1,41 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://blender/sparki/sparki.tscn" type="PackedScene" id=1]
+[ext_resource path="res://player/Player.gd" type="Script" id=2]
+[ext_resource path="res://player/CameraFollow.gd" type="Script" id=3]
+[ext_resource path="res://audio/player_collision.mp3" type="AudioStream" id=5]
+
+[sub_resource type="CapsuleShape" id=1]
+radius = 1.06273
+height = 0.786846
+
+[node name="Player" type="KinematicBody"]
+collision_mask = 6
+script = ExtResource( 2 )
+
+[node name="CollisionShape2" type="CollisionShape" parent="."]
+transform = Transform( 1, 0, 0, 0, -0.0174524, 0.999848, 0, -0.999848, -0.0174524, 0.0432833, 0.289642, -0.406868 )
+shape = SubResource( 1 )
+
+[node name="target" type="Spatial" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.66751, 0 )
+
+[node name="Camera" type="Camera" parent="target"]
+transform = Transform( 1, 0, 0, 0, 0.921063, 0.389413, 0, -0.389413, 0.921063, 0, 5.33249, 9 )
+current = true
+fov = 72.0
+script = ExtResource( 3 )
+distance = 3.0
+height = 1.0
+
+[node name="Pivot" type="Spatial" parent="."]
+
+[node name="sparki" parent="Pivot" instance=ExtResource( 1 )]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 1, 0 )
+
+[node name="collisionSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 5 )
+
+[node name="bookSquashSound" type="AudioStreamPlayer" parent="."]
+
+[connection signal="child_entered_tree" from="." to="." method="_on_Player_child_entered_tree"]

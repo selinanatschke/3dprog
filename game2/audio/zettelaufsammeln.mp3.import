@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/zettelaufsammeln.mp3-23fa4be3391483c9b97232d03343c730.mp3str"
+
+[deps]
+
+source_file="res://audio/zettelaufsammeln.mp3"
+dest_files=[ "res://.import/zettelaufsammeln.mp3-23fa4be3391483c9b97232d03343c730.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

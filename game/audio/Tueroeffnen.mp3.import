@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Tueroeffnen.mp3-a9abae5dc8b8dfaa3adefed49357d585.mp3str"
+
+[deps]
+
+source_file="res://audio/Tueroeffnen.mp3"
+dest_files=[ "res://.import/Tueroeffnen.mp3-a9abae5dc8b8dfaa3adefed49357d585.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/SprechblaseOeffnen.mp3-76a7b972f4e8d91a1638f8071669bd1b.mp3str"
+
+[deps]
+
+source_file="res://audio/SprechblaseOeffnen.mp3"
+dest_files=[ "res://.import/SprechblaseOeffnen.mp3-76a7b972f4e8d91a1638f8071669bd1b.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

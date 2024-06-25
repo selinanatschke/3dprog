@@ -1,0 +1,53 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://monitor/Roboto-Regular.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://monitor/monitor.gd" type="Script" id=2]
+[ext_resource path="res://monitor/monitor.jpg" type="Texture" id=3]
+[ext_resource path="res://UI/Cross.png" type="Texture" id=4]
+[ext_resource path="res://audio/tastenklick.mp3" type="AudioStream" id=5]
+
+[sub_resource type="DynamicFont" id=1]
+font_data = ExtResource( 1 )
+
+[node name="CanvasLayer" type="CanvasLayer"]
+script = ExtResource( 2 )
+
+[node name="TextureButton" type="TextureButton" parent="."]
+margin_left = 38.0
+margin_top = 98.0
+margin_right = 1928.0
+margin_bottom = 907.0
+rect_scale = Vector2( 0.5, 0.5 )
+texture_normal = ExtResource( 3 )
+
+[node name="Label" type="Label" parent="."]
+margin_left = 207.0
+margin_top = 164.0
+margin_right = 838.0
+margin_bottom = 425.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "Systeme online. Diagnose abgeschlossen. Alle Funktionen sind nun wiederhergestellt. 
+
+Hallo Sparki. Ich bin die KI J.A.R.V.I.S, Ihr persönlicher Assistent. Meine Protokolle zeigen, dass Sie Ihr Gedächtnis verloren haben. Ich bin hier, um Ihnen zu helfen, es wiederzuerlangen.
+
+Unsere erste Aufgabe wird es sein, die wichtigsten Erinnerungen und Daten zu rekonstruieren. Bitte entspannen Sie sich und folgen Sie meinen Anweisungen. Gemeinsam werden wir Ihre Vergangenheit entschlüsseln und Ihnen helfen, zu erfahren, wer Sie wirklich sind.
+
+Bereit, wenn Sie es sind. Lassen Sie uns beginnen."
+align = 1
+autowrap = true
+
+[node name="pressKeySound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 5 )
+
+[node name="Close" type="TextureButton" parent="."]
+anchor_right = 0.031
+anchor_bottom = 0.054
+margin_left = 986.0
+margin_top = 98.0
+margin_right = 1597.26
+margin_bottom = 712.6
+rect_scale = Vector2( 0.05, 0.05 )
+texture_normal = ExtResource( 4 )
+
+[connection signal="pressed" from="Close" to="." method="_on_Close_pressed"]

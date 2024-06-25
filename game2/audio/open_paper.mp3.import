@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/open_paper.mp3-372922b4b03784b4ec5456c5542ebefb.mp3str"
+
+[deps]
+
+source_file="res://audio/open_paper.mp3"
+dest_files=[ "res://.import/open_paper.mp3-372922b4b03784b4ec5456c5542ebefb.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0
