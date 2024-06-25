@@ -1,4 +1,4 @@
-[gd_scene load_steps=69 format=2]
+[gd_scene load_steps=70 format=2]
 
 [ext_resource path="res://player/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://blender/basicWall/basicWall.tscn" type="PackedScene" id=2]
@@ -116,6 +116,21 @@ _data = {
 "points": PoolVector3Array( 0, 0, 0, 0, 0, 0, 13, 0, 29, 0, 0, 0, 0, 0, 0, -9.23598, 9.11861, 23.2251, 0, 0, 0, 0, 0, 0, -12.7428, 1.3972, -27.1685, 0, 0, 0, 0, 0, 0, 9.93989, -8.86663, -26.475, 0, 0, 0, 0, 0, 0, 13, 0, 29 ),
 "tilts": PoolRealArray( 0, 0, 0, 0, 0 )
 }
+
+[sub_resource type="Environment" id=19]
+ambient_light_color = Color( 0.546875, 0.440179, 0.358887, 1 )
+ambient_light_energy = 0.5
+fog_enabled = true
+fog_color = Color( 0.188235, 0.184314, 0.176471, 1 )
+fog_sun_color = Color( 0.215686, 0.192157, 0.14902, 1 )
+fog_depth_end = 50.0
+fog_depth_curve = 1.46409
+dof_blur_far_enabled = true
+dof_blur_far_amount = 0.04
+dof_blur_near_enabled = true
+glow_enabled = true
+adjustment_enabled = true
+adjustment_saturation = 1.1
 
 [node name="Main" type="Node"]
 script = ExtResource( 27 )
@@ -773,6 +788,9 @@ autoplay = true
 [node name="RatTimer" type="Timer" parent="."]
 wait_time = 0.5
 autostart = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource( 19 )
 
 [connection signal="timeout" from="BookTimer" to="." method="_on_BookTimer_timeout"]
 [connection signal="timeout" from="RatTimer" to="." method="_on_RatTimer_timeout"]
