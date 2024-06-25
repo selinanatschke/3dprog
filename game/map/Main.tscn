@@ -1,4 +1,4 @@
-[gd_scene load_steps=68 format=2]
+[gd_scene load_steps=69 format=2]
 
 [ext_resource path="res://player/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://blender/basicWall/basicWall.tscn" type="PackedScene" id=2]
@@ -49,6 +49,7 @@
 [ext_resource path="res://audio/background_music.mp3" type="AudioStream" id=47]
 [ext_resource path="res://UI/StartScreen.tscn" type="PackedScene" id=48]
 [ext_resource path="res://PNG (Transparent)/star_01.png" type="Texture" id=49]
+[ext_resource path="res://blender/rat/Ratte.tscn" type="PackedScene" id=50]
 
 [sub_resource type="CubeMesh" id=2]
 size = Vector3( 30, 2, 60 )
@@ -119,6 +120,7 @@ _data = {
 [node name="Main" type="Node"]
 script = ExtResource( 27 )
 flying_book_scene = ExtResource( 28 )
+rat_scene = ExtResource( 50 )
 
 [node name="StartScreen" parent="." instance=ExtResource( 48 )]
 
@@ -765,4 +767,9 @@ stream = ExtResource( 47 )
 volume_db = -29.538
 autoplay = true
 
+[node name="RatTimer" type="Timer" parent="."]
+wait_time = 0.5
+autostart = true
+
 [connection signal="timeout" from="BookTimer" to="." method="_on_BookTimer_timeout"]
+[connection signal="timeout" from="RatTimer" to="." method="_on_RatTimer_timeout"]
